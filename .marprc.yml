@@ -1,0 +1,6 @@
+# Marp configuration
+allowLocalFiles: true
+theme: default
+themeSet: ./slides/themes/
+watch: false
+server: false

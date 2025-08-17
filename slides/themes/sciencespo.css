@@ -1,0 +1,179 @@
+/*
+ * @theme sciencespo
+ * @author Alexis Perrier
+ * @description Sciences Po DHUM Course Theme
+ */
+
+@import 'default';
+
+:root {
+  --color-primary: #003366;
+  --color-secondary: #0066cc;
+  --color-accent: #ff6600;
+  --color-background: #ffffff;
+  --color-foreground: #333333;
+  --color-highlight: #ffffcc;
+}
+
+section {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  padding: 40px;
+}
+
+/* Header styling */
+h1 {
+  color: var(--color-primary);
+  border-bottom: 3px solid var(--color-secondary);
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: var(--color-secondary);
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  color: var(--color-accent);
+}
+
+/* Links */
+a {
+  color: var(--color-secondary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Code blocks */
+code {
+  background: #f5f5f5;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+}
+
+pre {
+  background: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  overflow-x: auto;
+}
+
+/* Lists */
+ul, ol {
+  margin: 20px 0;
+}
+
+li {
+  margin: 10px 0;
+}
+
+/* Emphasis */
+strong {
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+em {
+  color: var(--color-accent);
+  font-style: italic;
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 4px solid var(--color-secondary);
+  margin: 20px 0;
+  padding: 10px 20px;
+  background: var(--color-highlight);
+  font-style: italic;
+}
+
+/* Footer for course info */
+section::after {
+  content: 'DHUM25A43 - ' attr(data-date) ' - https://discord.gg/DDbh5AyHYH';
+  position: absolute;
+  bottom: 20px;
+  left: 40px;
+  right: 40px;
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+
+/* Title slide styling */
+section[data-theme="title"] {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: white;
+}
+
+section[data-theme="title"] h1 {
+  font-size: 3em;
+  color: white;
+  border: none;
+  margin: 0;
+}
+
+section[data-theme="title"] h2 {
+  font-size: 1.5em;
+  color: #ccddff;
+  margin: 20px 0;
+}
+
+/* Image styling */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Two-column layout helper */
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* Highlight boxes */
+.highlight {
+  background: var(--color-highlight);
+  border: 2px solid var(--color-accent);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.note {
+  background: #e6f3ff;
+  border-left: 5px solid var(--color-secondary);
+  padding: 15px;
+  margin: 20px 0;
+}
+
+/* Center content */
+.center {
+  text-align: center;
+}
+
+/* Large text for emphasis */
+.large {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: var(--color-primary);
+}

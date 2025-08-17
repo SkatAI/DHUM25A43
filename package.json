@@ -1,0 +1,26 @@
+{
+  "name": "sciencespo-dhum-slides",
+  "version": "1.0.0",
+  "description": "Investigating with AI - Course slides using Marp",
+  "scripts": {
+    "build": "marp slides/01-welcome/01-welcome.md --html --pdf --allow-local-files -o slides/exports/",
+    "watch": "marp slides/01-welcome/01-welcome.md --html --watch --allow-local-files -o slides/exports/",
+    "serve": "marp --server --allow-local-files --theme slides/themes/minimal-dark.css -I slides/",
+    "serve:dark": "marp --server --allow-local-files --theme slides/themes/dark-classic.css -I slides/",
+    "build:html": "marp slides/01-welcome/01-welcome.md --html --allow-local-files --theme slides/themes/minimal-dark.css -o slides/exports/01-welcome.html",
+    "build:html:dark": "marp slides/01-welcome/01-welcome.md --html --allow-local-files --theme slides/themes/dark-classic.css -o slides/exports/01-welcome-dark.html",
+    "build:pdf": "marp slides/01-welcome/01-welcome.md --pdf --allow-local-files -o slides/exports/01-welcome.pdf"
+  },
+  "keywords": [
+    "marp",
+    "slides",
+    "education",
+    "ai",
+    "data-science"
+  ],
+  "author": "Alexis Perrier",
+  "license": "MIT",
+  "devDependencies": {
+    "@marp-team/marp-cli": "^3.4.0"
+  }
+}
