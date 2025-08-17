@@ -21,6 +21,8 @@
   "author": "Alexis Perrier",
   "license": "MIT",
   "devDependencies": {
-    "@marp-team/marp-cli": "^3.4.0"
+    "@marp-team/marp-cli": "^3.4.0",
+    "markdownlint-cli": "^0.45.0",
+    "prettier": "^3.6.2"
   }
 }

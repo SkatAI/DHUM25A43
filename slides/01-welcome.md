@@ -4,64 +4,63 @@ theme: minimal-dark
 class:
   - lead
   - invert
-paginate: true
-# backgroundColor: #fff
-# backgroundImage: url('../../img/')
-header: 'DHUM25A43 - Investigating with AI'
-footer: 'Fall 2025'
+paginate: false
+header: 'Investigating with AI'
+footer: 'DHUM25A43 - https://discord.gg/DDbh5AyHYH'
 ---
 
-<!--
+<!-- to override default theme
 _class: title
 _paginate: false
-_header: ""
-_footer: ""
--->
+_header: "Hello world!"
+_footer: "Github, Discord"
+ -->
 
-# DHUM 25A43 - 01
+<div class="columns">
+
+<div>
+
 # Investigating with AI
-## Welcome
 
+## DHUM 25A43 - Fall 2025
 
+Bienvenue - Welcome
+
+</div>
+<div>
+
+![w:400 center](../img/Discord-QR-code.png)
+
+<div class="center">
+Join the Discord
+</div>
+
+</div>
+
+</div>
 
 ---
-
-
-_footer: 'DHUM25A43 - 28/01/25 - https://discord.gg/DDbh5AyHYH'
-
 
 # Discord
 
-![w:400 center](../../img/Discord-QR-code.png)
+<!-- _footer: 'DHUM25A43 - 28/01/25 - https://discord.gg/DDbh5AyHYH' -->
+
+![w:400 center](../img/Discord-QR-code.png)
 
 - **#sciencespo-DHUM25A43**
 - **https://discord.gg/DDbh5AyHYH**
 
 ---
 
-# Meet the teachers
-
-<div class="columns">
-
-<div>
-
-## Andreï Mogoutov
-- PhD UPMC 93'
-- Data scientist, researcher, consultant
-- [andrei.mogoutov@sciencespo.fr](mailto:andrei.mogoutov@sciencespo.fr)
-
-</div>
-
-<div>
+# Who am I?
 
 ## Alexis Perrier
+
 - PhD TelecomParis 95'
 - Data scientist, author, teacher
 - [alexis.perrier@gmail.com](mailto:alexis.perrier@gmail.com)
 
-![w:300](../../img/LinkedIn_icon.svg.png) ![w:300](../../img/X_logo_2023.svg.png) ![w:300](../../img/Medium_logo_Monogram.svg.png) ![w:300](../../img/Bluesky_Logo.svg.png)
-
-</div>
+![w:100](../img/LinkedIn_icon.svg.png) ![w:100](../img/X_logo_2023.svg.png) ![w:100](../img/Bluesky_Logo.svg.png)
 
 </div>
 
@@ -113,6 +112,7 @@ _class: center
 **Technical Demo**: Showcase practical applications of the methods introduced.
 
 **Practical Student Work**:
+
 - Groups of 3-4 students collaborate on selected themes and datasets.
 - Hands-on project development with guidance from professors.
 
@@ -133,6 +133,7 @@ _class: center
 **We have 12 classes, 2h each**
 
 **We'll cover**
+
 - Background on Web and API
 - Data: how to collect and process
 - Machine Learning : training models for prediction
@@ -183,6 +184,7 @@ _class: center
 # Project Presentation
 
 ## Themes
+
 - Climate change, energy
 - AI - robotics
 - Brain–computer interface
@@ -262,11 +264,12 @@ A lot has happened in the world of Large Language Models over the course of 2024
 # Over 120 new models released in 2024!
 
 **Released Models 2024**
+
 - **Open Source Models: 55**
 - **API Only Models: 63**
 
 [**2024 AI Timeline**](https://huggingface.co/spaces/reach-vb/2024-ai-timeline)
-*a Hugging Face Space*
+_a Hugging Face Space_
 
 ---
 
@@ -278,6 +281,7 @@ A lot has happened in the world of Large Language Models over the course of 2024
 Total #models: 194. Total #votes: 2,557,144. Last updated: 2025-01-20.
 
 Creative Writing: #models: 190 (98%) #votes: 385,176 (15%)
+
 </div>
 
 ---
@@ -306,6 +310,7 @@ Creative Writing: #models: 190 (98%) #votes: 385,176 (15%)
 - **[LiveBench](https://livebench.ai/)**: avoid contamination
 
 and many others
+
 - **[Humanity's Last Exam](https://humanityslastexam.ai/)**
 - **[CultureVLM](https://culturevm.ai/)**
 - **…**
@@ -336,6 +341,7 @@ GPT 4.0 has made impressive strides over GPT 3.5 but continues to struggle in ce
 According to OpenAI, the essays that GPT-4 produced for these tests were graded by "qualified third-party contractors".
 
 GPT attempted 10 programming contests 100 times each, but was unable to consistently find solutions to the more complex problems.
+
 </div>
 
 ---
@@ -396,10 +402,12 @@ _class: center
 <div>
 
 **Strong Emergence**: raises the possibility of truly intelligent machines!
+
 - The observed abilities are **genuinely novel**, irreducible to the individual components or algorithms of the LLM.
 - the **wetness of water** isn't found in individual water molecules.
 
 **Weak Emergence**: sophisticated but fundamentally different from human intelligence
+
 - The observed abilities can still be **explained** by the underlying mechanisms,
 - But their appearance is unexpected and simply difficult to predict.
 - ~ modeling **traffic patterns** using the behavior of individual cars.
@@ -408,9 +416,9 @@ _class: center
 
 <div>
 
-![w:400](../../img/576px-Termite_Cathedral_DSC03570.jpg)
+![w:400](../img/576px-Termite_Cathedral_DSC03570.jpg)
 
-*A termite "cathedral" mound produced by a termite colony offers a classic example of emergence in nature.*
+_A termite "cathedral" mound produced by a termite colony offers a classic example of emergence in nature._
 
 [https://en.wikipedia.org/wiki/Emergence](https://en.wikipedia.org/wiki/Emergence)
 
@@ -429,9 +437,11 @@ _class: center
 **for instance 3 digit addition**
 
 **gradually increase size of model**
+
 - errors, errors, …, errors, …
 
 **and then suddenly**
+
 - correct
 
 ---
@@ -463,9 +473,11 @@ _class: center
 Like google docs but also for executing code
 
 Shareable, collaborative work
+
 </div>
 
 **A notebook is a series of executable cells**
+
 - code (python)
 - text with Markdown
 
@@ -524,6 +536,7 @@ _class: center
 **The dataset is available in the shared folder in google drive (csv file, google spreadsheet)**
 
 **It contains information of a 1000 movies**
+
 - title
 - description
 - ranking (imdb, Meta)
@@ -562,6 +575,7 @@ _class: center
 # Colab and AI
 
 **In Colab**
+
 - Load a dataset
 - prompt Gemini on what questions you can ask on this dataset
 - prompt Gemini to create the code to answer your questions
