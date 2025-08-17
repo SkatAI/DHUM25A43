@@ -1,0 +1,18 @@
+I have identified and labeled the speakers in the transcript as follows:
+
+**Speaker 1: Journalist/Interviewer**
+**Speaker 2: Marine Le Pen**
+
+Here is the labeled transcript:
+
+**Speaker 1:** Il y a une éligible pendant 5 ans avec effet immédiat mais aussi condamné à 4 ans de prison dont 2 enfermes à ménager sous braster électronique Marine Le Pen...
+
+**Speaker 2:** Parce que j'ai parfaitement compris ce que la présidente expliquait, à savoir qu'elle était en train de rendre une décision qui était une décision politique...
+
+**Speaker 1:** Est-ce que vous allez faire appel ? Bien, votre avocat d'yko, quand on est vous déposé, vous allez faire appel ?
+
+**Speaker 2:** Mais plus vite possible. Est-ce que vous demandez à la justice de se hatter de manière à ce que vous puissiez vous présenter en avril ou en mai de 1027 à la présidente de la République ?
+
+...and so on.
+
+Let me know if you have any further questions!

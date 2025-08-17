@@ -1,0 +1,105 @@
+# Jekyll
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+Gemfile.lock
+
+# Ruby
+*.gem
+.bundle
+vendor/
+
+# Node.js (if using npm/yarn for asset compilation)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# Build directories
+dist/
+build/
+out/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Course-specific
+# Student work (if storing locally)
+students/
+submissions/
+
+# Private notes
+private/
+notes/
+drafts/
+
+# Large files
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# API keys and credentials
+*.key
+*.pem
+credentials.json
+config/secrets.yml
+
+# Data files (comment out if you want to track datasets)
+data/*.csv
+data/*.json
+data/*.xlsx
+# Uncomment to track small datasets:
+# !data/sample*.csv
+
+# Slides exports (keeping source)
+slides/exports/
+*.pptx

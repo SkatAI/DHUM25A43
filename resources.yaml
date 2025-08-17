@@ -1,0 +1,85 @@
+resources:
+  anthropic cookbook:
+    title: Building Effective Agents Cookbook
+    link: https://github.com/anthropics/anthropic-cookbook/tree/main/patterns/agents
+
+  anthropic building agents:
+    title: Anthropic Building effective agents
+    link: https://www.anthropic.com/research/building-effective-agents
+    extracts: |
+      explore the common patterns for agentic systems
+      LLM enhanced with augmentations such as retrieval, tools, and memory
+      see: The Model Context Protocol to augment your LLM
+      Put yourself in the model's shoes. Is it obvious how to use this tool, based on the description and parameters, or would you need to think carefully about it
+    prompt chaining: each LLM call processes the output of the previous one
+      the overall task can be decomposed into fixed sub tasks
+    prompt routing: 1st task classifies then parallel processing depending on category
+    parallelization: parallel tasks, aggregated together. like voting, screening content
+    orchestrator-worker: like parallelization but substasks are not predefined.
+    Evaluator-optimizer: generate - evaluate loop. An LLM produces the content, a 2nd one evaluates the result.
+
+  livebench:
+    link: https://livebench.ai/#/
+    takeaways: |
+      updated questions to avoid overfitting,
+      math, coding, reasonning, always ground truth,
+      LLM judge are not reliable,
+      sonnet used to be higher, now it's openai
+      good way to select opensource LLMs
+
+  Wei Emergent Abilities LLMs:
+    title: Emergent Abilities of Large Language Models
+    link: https://www.jasonwei.net/blog/emergence
+
+  Wei COT Reasoning LLMs:
+    title: Chain-of-Thought Prompting Elicits Reasoning in Large Language Models
+    I like: emergent abilities (semantic understanding, symbol mapping, staying on topic, arithmetic ability, faithfulness, etc).
+
+  emergent LLM behavior:
+    status: not finished.
+    title: Generative Models as a Complex Systems Science
+    subtitle: How can we make sense of large language model behavior?
+    extracts and takeways: Benchmarks help us measure performance, but rarely discover behavior
+
+  Kestin ai tutoring outperforms:
+    title: AI Tutoring Outperforms Active Learning
+    author: Gregory Kestin Harvard
+    takeaways: content is presented through an AI-powered tutor
+      Active learning pedagogies
+      contains prompts to build AI tutor
+
+  mollick simulation agent education:
+    title: Ai agents and education simulated practice at scale Ethan Mollick
+    takeaways:
+      some good examples of agents with definitions, goals, audience, roles
+      also see appendix A. Tips for Interacting with Your AI Mentor. useful for teaching students how to use AI
+
+  mollic instructor innovator:
+    title: Instructors as Innovators, 76 pages
+    subtitle: A future-focused approach to new AI learning opportunities, with prompts
+    takeaways: not super helpful. too broad an hi level.
+      - goal play in which the student maintains their identity and applies their knowledge and skills in guiding others
+      - the AI can “act” as a novice about a topic. challenging a student choices, asking simple questions so that the students has to explain their choices.
+      I like the Mitigation Approaches p4
+
+  mollick AI teaching strategies:
+    title: Using AI to Implement Effective Teaching Strategies in Classrooms - Five Strategies, Including Prompts
+    takeaways:
+      strategies include:
+        numerous examples; varied explanations and analogies; low-stakes tests (help students retrieve information)
+        assessment of knowledge gaps; distributed practice.
+        good recap questions - What was the most important idea or concept covered in class today? ... p16
+        distributed practice
+
+to test:
+  - title: Introducing the Model Context Protocol
+    link: https://www.anthropic.com/news/model-context-protocol
+
+to read:
+  - title: A busy person’s Intro to AI Agents - Maya Akim
+    link: https://medium.com/@mayaakim/a-busy-persons-intro-to-ai-agents-d9779d50cd84
+    extracts:
+      Andrew Ng has shared in this lecture that an agentic workflow with “dumber” models like gpt 3.5 significantly outperforms zero-shot prompting of “smart” models like gpt-4.
+      sort of ensembling for LLMs
+
+to watch: Andrew NG <https://www.youtube.com/watch?v=sal78ACtGTc>

@@ -1,0 +1,173 @@
+# ================================
+# Document 0: session template
+# ================================
+# Purpose: Each session follows
+#   a specific structure
+
+session template:
+  topic: title and main topic of the session
+  space_time: hours, date & time, location
+  # break down the session into steps from intro to wrap up
+  # for instance
+  sections:
+    - title: course welcome and logistics
+      desc: welcome & intro
+      scope: |
+        - presentations
+        - curriculum
+        - evaluation
+        - office hours
+        - get to know survey
+      todo: |
+        - things we need to do
+    - title: the main topic of the session
+      desc: description
+      scope: |
+        - list here the key aspecs the students will learn or experiment with
+        - ...
+      goal: |
+        learning outcomes
+
+    - wrap up:
+      exit ticket: an exit tickket to help the student formulate their expectations, suggestions, needs and frustrations
+      learning outcomes: |
+        - list of learning outcomes of the class
+      homework:
+        - list of hme if any.
+
+# ================================
+# Document 1: Course description
+# ================================
+# Topic: Enquêter avec l’IA
+# Format: Cours presentiel
+
+general:
+  title: Enquêter avec l’IA
+  desc: |
+    Un cours de 24h pour troisième année d'initiation à l'analyse de données à l'aide d'outils d'intelligence artificielle.
+    L'objectif est de les immerger dans un processus d'enquête avec des outils numériques
+    et de les initier aux méthodes contemporaines d'exploration de données grâce aux grands modèles de langage (LLMs)
+    et aux systèmes d'agents intelligents.
+    - récolter et assembler des données en ligne
+    - analyser ces traces
+    - de présenter des résultats en fonction de la problématique défini
+    - rendu final prend une forme numérique, incluant la production d'un site web présentant les résultats
+    - note réflexive individuelle est également attendue sur cette expérience de production assistée par ordinateur.
+  scope:
+    - bases de l'IA
+    - production et circulation de données
+    - enquete collective
+    - LLMs
+    - agents
+  logistics:
+    - 6x4h de cours en presentiel
+    - 25 etudiants
+    - no code experience required
+
+---
+
+---
+# ================================
+# Document 1: Development Environment
+# ================================
+# Purpose: Local development settings
+# Updated: 2024-03-15
+# Owner: DevTeam
+
+session_02:
+  topic: Mongo Deep Dive
+  date: 3h 12/12 10-13 603
+  sections:
+    - title: last session recap
+      desc: recap of key points in last session
+      scope: |
+        - check install on local
+
+    - title: local install
+      desc: where is everything, how does it work?
+      scope: |
+        - know where the data is
+        - how to configure your local envt for mongodb
+        - a word on cloud solutions
+        - docker demo
+
+    - title: from SQL to Mongodb, direct equivalenc
+      desc: we explore specificities of MongoDB
+      scope: |
+        - key diffs in CRUD ops: `$lookup`, aggregation pipelines (GROUP BY), Nested/embedded documents
+        - document validation
+        - transactions and ACID properties
+        - data modifications: partial updates ($set, $inc etc.) and Array operations
+        - MongoDB Stored Procedures
+
+    - wrap up:
+      exit ticket: on skatai
+      learning outcomes: tbd
+      homework:
+        - install mongodb on local for windows and mac
+        - explore sample datasets on atlas
+  todo: everything
+
+session_03:
+  topic: Workshop on open food dataset
+  date: 3h 17/12 10-13 603
+  sections:
+    - title: workshop on open food
+
+session_04:
+  topic: getting started on Neo4j
+  date: 3h 17/12 14-17 602
+  sections:
+    - title: neo4j scuba diving
+
+session_05:
+  date: 3h 18/12 10-13 603
+  topic: deep dive into neo4j
+  sections:
+    - title: deep dive into neo4j
+
+session_06:
+  topic: Workshop on no4j
+  date: 3h 19/12 10-13 602
+  sections:
+    - title: workshop with neo4j
+
+# --------------------
+
+need to cover:
+  - mongodb:
+    level 1: similar to sql; CRUD; find, insert, update, joins, create
+    level 2: performance optimization; indexing; query plans,
+    level 3: cloud, sharding
+    schema design: embedding vs referencing, https://www.mongodb.com/developer/products/mongodb/mongodb-schema-design-best-practices/
+    time series: wouldd make a good IoT example
+    vector search: in mongodb, compare with weaviate
+    aggregation & indexing: see book on FARM @packt and example at  https://www.mongodb.com/developer/products/mongodb/optimizing-lookup-performance-using-power-of-indexing/
+    sharding vs repliccation: https://www.cloudactivelabs.com/en/blog/mongodb-replication-vs-sharding-when-to-choose-which
+    Concurrency Issues: how to deala nd prevent them
+    Data Validation Errors: hpw to validate the data before inserting it
+
+questions:
+  json vs document: |
+    - is a `document` exactly similar to a json record. what about jsonl.
+    - could we use yaml or XML
+  performance optimization: |
+    - how do you optimise mongodb database and collection perf
+
+datasets:
+  sample atlas datasets: https://www.mongodb.com/developer/products/atlas/atlas-sample-datasets/
+
+resources:
+  relational vs no sql: https://www.enterprisedb.com/choosing-mongodb-postgresql-cloud-database-solutions-guide
+  connect to mongodb on compass: https://www.mongodb.com/docs/compass/current/connect/
+  convert queries from SQL to mongoDB: up to somme complexity it's rerally the same see example
+  mongosh cheatsheet: https://learn.mongodb.com/learn/course/mongodb-shell-cheatsheet/main/mongodb-shell-cheatsheet
+  schema design: |
+    Schema Design Approaches – Relational vs. MongoDB
+    https://www.mongodb.com/developer/products/mongodb/mongodb-schema-design-best-practices/
+    Embedding vs. Referencing with $lookup
+    => many possible schema for given data and application
+  neo4tourism: https://chewbii.com/neo4tourism-a-framework-for-mobility-analysis-tourist-circulation-on-db-oriented-graph/
+bdpedia: |
+  http://b3d.bdpedia.fr/
+  http://b3d.bdpedia.fr/rech-exacte.html#s3-le-langage-d-interrogation-de-mongodb

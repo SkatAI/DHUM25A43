@@ -1,0 +1,86 @@
+[
+    {
+        "speaker": "journalist",
+        "text": "Bonsoir Marine Le Pen. Merci d'avoir accepté notre invitation. Ce midi, on a vu que vous avez quitté la salle d'audience avant même la fin du prononcé du jugement, sans savoir quelle était la durée de la période durant laquelle vous ne pourriez pas être éligible. Pourquoi êtes-vous partie comme ça ? Qu'est-ce qui vous a traversé l'esprit ?"
+    },
+    {
+        "speaker": "MLP",
+        "text": "Parce que j'ai parfaitement compris ce que la présidente expliquait, à savoir qu'elle était en train de rendre une décision qui était une décision politique..."
+    },
+    {
+        "speaker": "journalist",
+        "text": "Mais en quoi était-elle si politique ? Il y a 150 pages de jugement..."
+    },
+    {
+        "speaker": "MLP",
+        "text": "La présidente dit, je vais rendre votre inéligibilité immédiate contrairement à l'état de droit..."
+    },
+    {
+        "speaker": "journalist",
+        "text": "Donc elle obéit à une consigne ?"
+    },
+    {
+        "speaker": "MLP",
+        "text": "Je ne suis pas sûre qu'ils aient besoin de consignes..."
+    },
+    {
+        "speaker": "journalist",
+        "text": "Mais madame, l'inéligibilité immédiate, elle est prévue par les textes..."
+    },
+    {
+        "speaker": "MLP",
+        "text": "Non monsieur. La loi Sapin 2 ne s’applique pas à cette affaire..."
+    },
+    {
+        "speaker": "journalist",
+        "text": "Est-ce que vous allez faire appel ?"
+    },
+    {
+        "speaker": "MLP",
+        "text": "Bien sûr, le plus vite possible..."
+    },
+    {
+        "speaker": "journalist",
+        "text": "Est-ce que vous demandez à la justice de se hâter ?"
+    },
+    {
+        "speaker": "MLP",
+        "text": "Il faut que la justice se hâte, mais votre journaliste elle-même disait tout à l’heure que cela prend en général 18 mois à 2 ans..."
+    },
+    {
+        "speaker": "journalist",
+        "text": "Supposons qu’en appel vous soyez condamnée sans exécution immédiate. Vous pourriez techniquement vous présenter à l’élection présidentielle ?"
+    },
+    {
+        "speaker": "MLP",
+        "text": "Évidemment que je le ferai. Car je considère que ce procès est un procès politique..."
+    },
+    {
+        "speaker": "journalist",
+        "text": "Si vous ne pouvez pas vous présenter, Jordan Bardella serait-il le meilleur candidat ?"
+    },
+    {
+        "speaker": "MLP",
+        "text": "Jordan Bardella est un être formidable pour le mouvement..."
+    },
+    {
+        "speaker": "journalist",
+        "text": "Et si vous êtes définitivement condamnée, ferez-vous appel au chef de l'État ?"
+    },
+    {
+        "speaker": "MLP",
+        "text": "Non, nous n’en sommes pas là. Je crois beaucoup à la capacité de la cour d’appel..."
+    },
+    {
+        "speaker": "journalist",
+        "text": "Cette condamnation signifie-t-elle votre retrait de la vie politique ?"
+    },
+    {
+        "speaker": "MLP",
+        "text": "En aucune façon. Ce sont les électeurs qui décident. Moi, je ne suis pas démoralisée..."
+    },
+    {
+        "speaker": "journalist",
+        "text": "Merci, Marine Le Pen, d’avoir répondu à nos questions."
+    }
+]

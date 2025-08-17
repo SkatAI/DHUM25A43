@@ -1,0 +1,102 @@
+[
+  {
+    "id": "A1",
+    "speaker": "Speaker 1",
+    "statement": "Il y a une éligible pendant 5 ans avec effet immédiat mais aussi condamné à 4 ans de prison dont 2 enfermes à ménager sous braster électronique Marine Le Pen...",
+    "structure": {
+      "premises": [
+        "P1: The decision was political",
+        "P2: The timing affects candidacy"
+      ],
+      "implicit_premises": [
+        "IP1: Political decisions can be appealed"
+      ],
+      "conclusion": "The justice system is being used for political purposes"
+    },
+    "evaluation": {
+      "validity": "Appears logically consistent",
+      "fallacies": [],
+      "consistency": "No contradictions identified"
+    },
+    "evidence": {
+      "type": "Anecdotal and interpretative",
+      "strength": "Moderate",
+      "relevance": "Directly related to the political context"
+    }
+  },
+  {
+    "id": "A2",
+    "speaker": "Speaker 1",
+    "statement": "Est-ce que vous allez faire appel ? Bien, votre avocat d'yko, quand on est vous déposé, vous allez faire appel ?",
+    "structure": {
+      "premises": [
+        "P1: The decision was political",
+        "P2: The timing affects candidacy"
+      ],
+      "implicit_premises": [
+        "IP1: Political decisions can be appealed"
+      ],
+      "conclusion": "The justice system is being used for political purposes"
+    },
+    "evaluation": {
+      "validity": "Appears logically consistent",
+      "fallacies": [],
+      "consistency": "No contradictions identified"
+    },
+    "evidence": {
+      "type": "Anecdotal and interpretative",
+      "strength": "Moderate",
+      "relevance": "Directly related to the political context"
+    }
+  },
+  {
+    "id": "A3",
+    "speaker": "Speaker 2",
+    "statement": "Parce que j'ai parfaitement compris ce que la présidente expliquait, à savoir qu'elle était en train de rendre une décision qui était une décision politique...",
+    "structure": {
+      "premises": [
+        "P1: The decision was political",
+        "P2: The timing affects candidacy"
+      ],
+      "implicit_premises": [
+        "IP1: Political decisions can be appealed"
+      ],
+      "conclusion": "The justice system is being used for political purposes"
+    },
+    "evaluation": {
+      "validity": "Appears logically consistent",
+      "fallacies": [],
+      "consistency": "No contradictions identified"
+    },
+    "evidence": {
+      "type": "Anecdotal and interpretative",
+      "strength": "Moderate",
+      "relevance": "Directly related to the political context"
+    }
+  },
+  {
+    "id": "A4",
+    "speaker": "Speaker 2",
+    "statement": "Mais plus vite possible. Est-ce que vous demandez à la justice de se hatter de manière à ce que vous puissiez vous présenter en avril ou en mai de 1027 à la présidente de la République ?\n\n...and so on.\n\nLet me know if you have any further questions!",
+    "structure": {
+      "premises": [
+        "P1: The decision was political",
+        "P2: The timing affects candidacy"
+      ],
+      "implicit_premises": [
+        "IP1: Political decisions can be appealed"
+      ],
+      "conclusion": "The justice system is being used for political purposes"
+    },
+    "evaluation": {
+      "validity": "Appears logically consistent",
+      "fallacies": [],
+      "consistency": "No contradictions identified"
+    },
+    "evidence": {
+      "type": "Anecdotal and interpretative",
+      "strength": "Moderate",
+      "relevance": "Directly related to the political context"
+    }
+  }
+]
