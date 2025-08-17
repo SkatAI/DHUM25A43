@@ -101,5 +101,5 @@ data/*.xlsx
 # !data/sample*.csv
 
 # Slides exports (keeping source)
-slides/exports/
+# slides/exports/
 *.pptx
