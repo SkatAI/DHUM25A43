@@ -1,21 +1,115 @@
-# readme
+# sciencespo-dhum-slides
 
-- writing blog posts with CrewAI and Reddit agent <https://medium.com/@mayaakim/crewai-a-team-of-ai-agents-that-work-together-for-you-4cc9d24e0857>
+> Investigating with AI - Course slides using Marp
 
-## Chats
+This repository contains Marp-based slides for the "Investigating with AI" course (DHUM25A43) at Sciences Po.
 
-See the crew AI chat
+## Setup
 
-<https://chatgpt.com/g/g-qqTuUWsBY-crewai-assistant/c/67090afd-6dc4-800e-b17f-6da208542dfe>
+1. Install Node.js and npm.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-## Tools
+## Building Slides
 
-<https://www.crewai.com/open-source>
+The main slide decks are located in the `slides/` directory.
 
-<https://serper.dev/api-key>
+### Generate HTML and PDF
+Builds the slides for `01-welcome`.
+```bash
+npm run build
+```
 
-<https://github.com/Significant-Gravitas/AutoGPT>
+### Watch mode (auto-rebuild on changes)
+```bash
+npm run watch
+```
 
-## Papers
+### Serve all slides locally
+This command starts a live-preview server for all slide decks in the `slides/` directory.
+```bash
+npm run serve
+```
 
-- MLE-bench  <https://openai.com/index/mle-bench/> <https://arxiv.org/abs/2410.07095>
+### Generate only HTML
+```bash
+npm run build:html
+```
+
+### Generate only PDF
+```bash
+npm run build:pdf
+```
+
+## Directory Structure
+
+```
+.
+├── slides/
+│   ├── 01-welcome/           # Session 1: Welcome & Introduction
+│   │   └── 01-welcome.md     # Main slide deck
+│   ├── themes/               # Custom Marp themes
+│   │   └── sciencespo.css    # Course theme
+│   └── exports/              # Generated HTML/PDF files
+├── package.json          # Project configuration
+└── readme.md             # This file
+```
+
+## Theme Features
+
+The `sciencespo.css` theme used for the slides includes:
+- Sciences Po color scheme
+- Custom layouts for title slides
+- Two-column layout support (`.columns` class)
+- Highlight boxes (`.highlight` class)
+- Note boxes (`.note` class)
+- Centered content (`.center` class)
+- Large text emphasis (`.large` class)
+
+## Slide Syntax Examples
+
+### Title Slide
+```markdown
+<!--
+_class: title
+_paginate: false
+-->
+
+# Course Title
+## Subtitle
+Date
+```
+
+### Two-Column Layout
+```markdown
+<div class="columns">
+<div>
+Left column content
+</div>
+<div>
+Right column content
+</div>
+</div>
+```
+
+### Highlight Box
+```markdown
+<div class="highlight">
+Important content here
+</div>
+```
+
+### Images
+To insert an image from the `img/` directory:
+```markdown
+![w:400 center](../img/image.png)
+```
+
+## Course Information
+
+- **Course**: DHUM25A43 - Investigating with AI
+- **Institution**: Sciences Po
+- **Instructors**: Alexis Perrier, Andreï Mogoutov
+- **Discord**: https://discord.gg/DDbh5AyHYH
