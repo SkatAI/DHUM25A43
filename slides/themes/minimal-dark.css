@@ -11,6 +11,7 @@
   --color-foreground: #e6f2ff;
   --color-heading: #d0d0d0;
   --color-link: #5588bb;
+  --color-bluesky: #0478ec;
   --color-code-bg: #1e1e1e;
   --color-code-border: #404040;
   --color-accent: #666666;
@@ -35,6 +36,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 2.5em;
   margin-bottom: 30px;
+  color: var(--color-bluesky);
 }
 
 h2 {
@@ -205,8 +207,14 @@ section::after {
   position: absolute;
   bottom: 20px;
   left: 60px;
-  right: 60px;
+  right: 120px;
   font-size: 14px;
   color: var(--color-accent);
-  text-align: center;
+  text-align: left;
+}
+
+/* Page number positioning using Marp's pagination system */
+section {
+  --paginate-color: var(--color-accent);
+  --paginate-position: right;
 }

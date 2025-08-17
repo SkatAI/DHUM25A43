@@ -1,0 +1,3 @@
+{
+  "extends": "@marp-team/markdownlint-config-marp"
+}

@@ -17,26 +17,31 @@ This directory contains Marp-based slides for the "Investigating with AI" course
 ## Building Slides
 
 ### Generate HTML and PDF
+
 ```bash
 npm run build
 ```
 
 ### Watch mode (auto-rebuild on changes)
+
 ```bash
 npm run watch
 ```
 
 ### Serve slides locally
+
 ```bash
 npm run serve
 ```
 
 ### Generate only HTML
+
 ```bash
 npm run build:html
 ```
 
 ### Generate only PDF
+
 ```bash
 npm run build:pdf
 ```
@@ -56,6 +61,7 @@ slides/
 ## Theme Features
 
 The `sciencespo.css` theme includes:
+
 - Sciences Po color scheme
 - Custom layouts for title slides
 - Two-column layout support (`.columns` class)
@@ -67,6 +73,7 @@ The `sciencespo.css` theme includes:
 ## Slide Syntax Examples
 
 ### Title Slide
+
 ```markdown
 <!--
 _class: title
@@ -74,11 +81,14 @@ _paginate: false
 -->
 
 # Course Title
+
 ## Subtitle
+
 Date
 ```
 
 ### Two-Column Layout
+
 ```markdown
 <div class="columns">
 <div>
@@ -91,6 +101,7 @@ Right column content
 ```
 
 ### Highlight Box
+
 ```markdown
 <div class="highlight">
 Important content here
@@ -98,6 +109,7 @@ Important content here
 ```
 
 ### Images
+
 ```markdown
 ![w:400 center](../../img/image.png)
 ```
