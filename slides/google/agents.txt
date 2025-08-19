@@ -1,0 +1,223 @@
+DHUM25A43 - 8
+Investigating with AI
+LLMs & Agents
+25/03, 2025
+
+
+
+---
+
+# Benchmarks
+
+<div class="columns">
+
+<div>
+
+- **The Massive Multitask Language Understanding ([MMLU](https://arxiv.org/abs/2009.03300))** : range of exam questions on academic subjects.
+- **[BIG-bench](https://github.com/google/BIG-bench)** : Beyond the Imitation Game
+- **[GPQA Diamond](https://arxiv.org/abs/2311.12022)**: harder still, google proof,
+  - PhDs domain experts reach 74% accuracy
+- **[LiveBench](https://livebench.ai/)**: avoid contamination
+
+and many others
+
+- **[Humanity's Last Exam](https://humanityslastexam.ai/)**
+- **[CultureVLM](https://culturevm.ai/)**
+- **…**
+
+</div>
+
+<div>
+
+<div class="highlight large">
+It's becoming harder to find tasks that are difficult enough for the LLMs.
+</div>
+
+</div>
+
+</div>
+
+---
+
+# Augmented LLMs
+
+<div class="highlight large center">
+It's no longer just about the model
+</div>
+
+- 🔍 **Web browsing**
+- 📚 **File upload - projects - knowledge base**
+- 🧠 **Dynamic memory**
+- 👁 **Streaming**
+- 🖐 **Function calling**
+- 💋 **speech**
+- 🥸 **voice**
+
+---
+
+# 2025 ?
+
+<div style="color: red; font-weight: bold;">weekly updates</div>
+
+- Models: DeepSeek-R1, OpenAI o3
+- Stargate project ?!
+- China vs US
+- Massive deployment of AI in all Google and Microsoft services
+- Platform evolutions : Anthropic, OpenAI, Gemini, …
+  - more features, connections, memory, protocols
+
+---
+
+# 2025 ?
+
+**Ethan Mollick** : [Which AI to Use Now: An Updated Opinionated Guide](https://www.oneusefulthing.org/p/which-ai-to-use-now-an-updated-opinionated)
+
+<div class="note">
+Comparison table showing different AI services, their capabilities, and recommended use cases.
+</div>
+
+---
+
+<!--
+_class: center
+-->
+
+# Emergence
+
+---
+
+# Emergence
+
+**Complex systems exhibit properties or behaviors that are not reducible to their individual components.**
+
+<div class="columns">
+
+<div>
+
+**Strong Emergence**: raises the possibility of truly intelligent machines!
+
+- The observed abilities are **genuinely novel**, irreducible to the individual components or algorithms of the LLM.
+- the **wetness of water** isn't found in individual water molecules.
+
+**Weak Emergence**: sophisticated but fundamentally different from human intelligence
+
+- The observed abilities can still be **explained** by the underlying mechanisms,
+- But their appearance is unexpected and simply difficult to predict.
+- ~ modeling **traffic patterns** using the behavior of individual cars.
+
+</div>
+
+<div>
+
+![w:400](../img/576px-Termite_Cathedral_DSC03570.jpg)
+
+_A termite "cathedral" mound produced by a termite colony offers a classic example of emergence in nature._
+
+[https://en.wikipedia.org/wiki/Emergence](https://en.wikipedia.org/wiki/Emergence)
+
+</div>
+
+</div>
+
+---
+
+# Emergence - Jason Wei - OpenAI
+
+[**137 emergent abilities of large language models — Jason Wei**](https://arxiv.org/abs/2206.07682)
+
+**As the size of the model increases, we see sudden improvements in its performance on certain tasks**
+
+**for instance 3 digit addition**
+
+**gradually increase size of model**
+
+- errors, errors, …, errors, …
+
+**and then suddenly**
+
+- correct
+
+---
+
+# LLMs you can use
+
+- Gemini (Colab)
+- Gemini (aistudio.google.com)
+- chatGPT (with memory)
+- DeepSeek
+- Claude.ai, (create a project)
+- Gemini
+- LLama
+- …
+
+---
+
+
+
+
+
+Modular Frameworks for Multi-Agent systems
+
+
+
+
+I have uploaded a CSV file containing titles and summaries of New York Times articles about artificial intelligence. Please conduct a comprehensive sociological analysis of this dataset, focusing on:​
+Identification of Key Actors: Determine the main individuals, organizations, and groups mentioned in the articles.​
+Topic Modeling: Identify the primary topics and issues discussed, highlighting any recurring themes.​
+Time Series Analysis: Analyze how the coverage of these actors and topics has evolved over time. Please provide the annotation results in CSV format, including all relevant fields, without any additional text or explanations.
+
+
+
+
+Utilizing the generated scripts and intermediate datasets, please create a detailed interactive HTML report. This report should include:​
+
+Interactive Charts and Tables: Visual representations of the data that allow for user interaction, such as sorting, filtering, and hovering to reveal additional information.​
+
+Comprehensive Comments: Explanations accompanying each chart and table to elucidate the data presented, methodologies used, and any pertinent observations.​
+
+Key Findings: A summary section highlighting the main insights derived from the analysis, emphasizing significant patterns, trends, and anomalies.​
+
+Ensure that the HTML report is well-structured, user-friendly, and facilitates easy navigation through different sections.​
+
+Please provide the complete HTML code for this report, ensuring all interactive elements are functional and appropriately linked to the datasets
+
+https://drive.google.com/file/d/1XPrMhzWAEIhGCbsueQ0fmNGm06sCr0Jt/view?usp=sharing
+
+https://groq.com/
+https://console.groq.com/keys
+
+Models supported by GROQ
+https://console.groq.com/docs/models
+
+Prompt
+
+    Below are multiple texts. For each one, extract the following information in **strict JSON format**:
+    - **Actors' names** (List of important people or entities)
+    - **Their categories** (e.g., Politician, Organization, Scientist)
+    - **Arguments** (Main claims made in the text)
+    - **Topics** (General themes or subject areas covered)
+
+    **Format the output as a JSON list, where each entry corresponds to a text.**
+
+    **JSON Example Format:**
+    ```json
+    [
+        {{
+            "actors": ["Person or Entity 1", "Person or Entity 2"],
+            "categories": ["Category 1", "Category 2"],
+            "arguments": ["Main argument 1", "Main argument 2"],
+            "topics": ["Topic 1", "Topic 2"]
+        }},
+        ...
+    ]
+    ```
+
+    **Important Notes:**
+    - Always return an **array of JSON objects**, each corresponding to a text.
+    - If a field is **empty**, return an empty list `[]` instead of omitting it.
+    - **Do not use Markdown formatting** in the response.
+    - Ensure JSON syntax is **strictly valid**.
+
+    **Here are the texts:**
+    {batch_texts}
+    """

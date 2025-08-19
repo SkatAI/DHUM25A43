@@ -1,0 +1,250 @@
+DHUM25A43 - 3
+Investigating with AI
+NLP
+Feb 11th, 2025
+
+What we saw last time
+Open source vs closed source
+API : REST, JSON
+Demo Colab 
+
+Projects
+
+Design of Empirical Research with Data Analysis in Social Sciences
+Defining the Research Problem : clear research questions and hypotheses
+Selecting Data Sources : public datasets, archives, online platforms
+Data Collection Techniques : find existing datasets, web scraping, APIs, online platforms
+Data Selection, Cleaning and Preprocessing : query, data normalization and transformation
+
+Exploratory Data Analysis (EDA) : Inspect data types, distributions, and summary statistics
+Histograms, box plots, and scatter plots for variable distribution
+Heatmaps and correlation matrices to detect relationships
+Clustering for grouping similar observations
+	Mapping of data
+
+Deeper Final Analysis: data selection, cleaning  and refinement 
+
+Advanced Techniques :
+Natural Language Processing (NLP): Sentiment analysis, topic modeling, text classification
+Data Analysis with LLM
+Machine Learning Models
+Graph Theory: Social network analysis, community detection, mapping
+
+Interpretation and Reporting : findings back to theoretical frameworks and research questions
+Data & method limitations, potential biases, and methodological constraints
+
+Communicating Research Findings : 
+Visuals and storytelling techniques, interactive charts, website
+Limitations, and future research directions
+
+Today
+Classic NLP
+some libraries: spacy, NLTK
+Similarity and Embeddings
+Demo : sentence similarity with wikipedia
+OpenAI API
+
+
+At the end of this class
+You
+understand what classic NLP is all about
+can work with embeddings
+can query OPEN AI API
+
+Classic 
+NLP
+
+From linguistique to NLP
+1916 Ferdinand de Saussure
+1957 Benveniste
+1966 Chomsky
+
+Book of reference
+Speech and Language Processing (3rd ed. draft) Dan Jurafsky and James H. Martin 
+
+"Will you marry me?" is a marriage proposal. 
+"Will, You, Mary, Me" is a card game proposal. 
+"Will, you marry me" is a time traveller spoiling the future. 
+"Will you, Mary me" is a cavewoman named Mary, trying to make Will, who has amnesia, remember who he is.
+Ambiguities
+I saw her duck
+I saw her duck. She tried to avoid a flying ball.
+Let’s eat, grandpa.
+Let’s eat grandpa.
+
+Time flies like an arrow
+
+Applications - classic NLP
+Text mining 
+NER: Named Entity Recognition: LOC, PER, 
+POS: Part of speech Tagging : nouns, adjectives, verbs, …
+speech to text, text to speech
+Translation
+Classification: sentiment analysis, spam, ...
+Text generation, summarization, question answering
+Topic identification, topic modeling
+word sense disambiguation : bank, 
+
+Written text is extremely complex
+Non standard language
+Variable length
+Discrete: rat <> sat, while image and sound are continuous
+Wide variety of complexity across languages
+Arabic: ...
+German: Donaudampfschiffahrtsgesellschaftskapitän (5 “words”) 
+Chinese: 50,000 different characters (2-3k to read a newspaper) 
+Japanese: 3 writing systems
+Thai: Ambiguous word boundaries and sentence concepts
+Slavic: Different word forms depending on gender, case, tense
+Encoding: unicode vs Ascii
+unstructured data
+
+
+Wayyyyyy back in 2021! 4 years ago!
+
+Demo classic NLP
+https://cloud.google.com/natural-language 
+Valery Gerasimov, chief of the army’s general staff, said the Tsirkon missile covered a distance of more than 280 miles in 4.5 minutes to destroy a target in the Barents Sea off Russia’s Arctic coast. He said it was fired from an Admiral Gorshkov-class frigate in the White Sea and that it marked the first time the missile had hit a target at sea.
+From Russia tests hypersonic missile on Putin's birthday | World 
+SpaceX began a new era of spaceflight: For all those searching for a new planet to call home, the year brought at least a bit of good news. SpaceX, the company founded by billionaire Elon Musk to fulfill his dream of colonizing Mars, launched NASA astronauts into orbit for the first time since the U.S. government retired the space shuttle program in 2011. SpaceX regularly transports cargo to the International Space Station, and in 2020 became the first private enterprise ever to launch astronauts there.
+
+From 2020 Events ‑ Pop Culture, U.S. Politics & World | HISTORY 
+
+Part of Speech tagging
+
+Stopwords
+many words have no meaning: stopwords
+stopwords = ['the', 'of', 'and', 'is','to','in','a','from','by','that', 'with', 'this', 'as', 'an', 'are','its', 'at', 'for', …]
+
+What is the unit ?
+We can work with
+words, syllables, tokens, letters & punctuation
+Bigrams, n-grams: New York, cul-de-sac, pain au chocolat
+sentences, paragraphes, tweets, articles, books, comments
+Corpus: a whole set of text
+And
+The vocabulary is large / infinite and fast changing 
+Typos, multiple spellings 
+
+Vocabularies
+fixed and large size : balance between performance and exhaustivity / meaning
+Out of Vocabulary 
+Named entities and proper nouns
+Domain-specific technical terms
+Neologisms and emerging words
+Misspellings and typos
+Morphological variants
+
+Tokenization: defining the unit of text
+What's the most efficient unit of text ?
+Using words is problematic: 
+very large vocabulary, multiple forms: plural, declension (home, house), conjugation, ...,etc 
+Using letters is too short
+Let's split words into multiple tokens: subwords tokenization
+unhappiness -> un + happ + iness
+running -> run + ing
+biiig -> b + iii + g
+
+Benefit of subwords tokenization
+no words are OOV: out of vocabulary 
+gpt 3.5 did not know about COVID
+typo resilient
+smaller vocabulary size
+captures semantic and morphological meaning better
+
+LLM pricing - based on input - output Tokens
+Pricing | OpenAI  Feb 4th 2025
+
+Embeddings
+
+A distance between words
+How to calculate a distance between 2 texts ?
+so that we can say that 
+banana is closer to apple than it is to plane; 
+the dog barks is closer to the cat meows than it is to the tractor sputters, …
+before 2013: counting words and their relative frequencies (messy, crude, called tf-idf, worked well for spam detection)
+
+Word2Vec
+2013: Thomas Mikolov @Google Efficient Estimation of Word Representations in Vector Space https://arxiv.org/abs/1301.3781 
+
+Queen - Woman = King - Man
+France + capital =  Paris 
+
+no context disambiguation: bank (river) = bank (finance) 
+
+2013! Word2vec
+One word has one vector of large dimension
+https://airbyte.com/data-engineering-resources/sentence-word-embeddings 
+
+Once you have embeddings of 2 texts (sentences, words, tokens ,...)
+The distance between the 2 text is given by the cosine similarity of their embeddings
+distance with Cosine Similarity
+
+Current embeddings methods
+Embedding using an LLM
+Hugging Face Transformers: For models like BERT, RoBERTa, SBERT.
+OpenAI API: For models like text-embedding-ada-002.
+Example Workflow:
+Load a pre-trained SBERT model.
+Pass your sentences through the model.
+Get a 768-dimensional vector (embedding) for each sentence.
+Use these embeddings for your task.
+
+
+Demo 
+Find immigration related text in wikipedia pages of main European capitals
+use chatGPT project
+use wikipedia API
+get the pages for Paris, Rome, Berlin, …
+split the text into sentences
+calculate the embeddings for each sentence
+given a query sentence and its embeddings
+find the N sentences that are most similar to the query sentence
+save the corpus
+https://colab.research.google.com/drive/16wQ3o8XQNEhADR2v2ibwfvjaKXKvkyKW#scrollTo=cGm37GYrSNd9 
+
+OpenAI API
+
+The secret key 
+create an account
+provision some money (~$2, $3)
+create a secret key
+save that secret key in a safe place on your computer
+never put the key in the code
+in colab, add the key on the left side 
+for OpenAI the name of the key is 
+OPENAI_API_KEY
+
+Data Sources
+
+Doctissimo (forum “antibio”)
+Twitter (-> 2023)
+Youtube
+Presse ('Mediapart', 'Le Figaro', 'Libération', 'Le Monde' )  (+ Factiva)
+Web
+Query
+
+((resistant OR resistante OR resistance OR resistantes OR resistance OR résistant OR résistante OR résistance OR résistantes OR résistance) AND (antibiotique OR antibiotiques OR antibio OR antibios OR antimicrobien OR antimicrobiens)) OR antibioresistance OR antibiorésistant OR antibioresistante OR antibiorésistance OR antibiorésistant OR antibiorésistante OR #antibioresistance OR #antibiorésistant OR #antibioresistante OR #antibiorésistance OR #antibiorésistant OR #antibiorésistante)
+((resistant OR resistante OR resistance OR resistantes OR resistance OR résistant OR résistante OR résistance OR résistantes OR résistance) (Amphotericine OR Amikacine  OR Gentamicine  OR Neomycine  OR Nétilmycine  OR Spectinomycine  OR Streptomycine  OR Tobramycine OR colistine OR Polymyxine OR Daptomycine OR Vancomycine OR Teicoplanine OR Fosfomycine OR Ceftriaxone OR Céfépime  OR Céfotaxime  OR Cefpirome  OR Ceftazidime OR Céfixime OR Cefpodoxime OR Céfodiam OR Céfamandole  OR Céfoxitine  OR Céfuroxime OR Céfaclor  OR Céfadroxil  OR Céfalexine  OR Céfalotine  OR Céfazoline  OR Céfradine OR Aztréonam OR Ertapénem OR Imipénem OR Méropénem OR Témocilline OR Pivmécillinam OR Pipéracilline OR Tazobactam OR Cilastatine OR Ticarcilline OR (Acide clavulanique) OR Oxacilline OR Cloxacilline OR Pénicilline OR Benzathine OR benzylpénicilline OR Ampicilline OR Sulbactam OR Amoxicilline OR cefpodocile OR proxetil))
+
+Antibiotics in  'Mediapart', 'Le Figaro', 'Libération', 'Le Monde' 2004-2024 (2045 documents)
+
+LLM Prompt
+
+Annotation by LLMs -  actants, arguments, topics, summary
+
+Matthieu Amiech\xa0: «\xa0La gestion de la crise sanitaire nous entraîne vers une société-machine\xa0»\n Pour l’éditeur Matthieu Amiech, penseur du développement des technologies, la crise liée au Covid constitue «\xa0un effet d’aubaine pour les géants du numérique\xa0». Face à «\xa0l’informatisation de toute la vie sociale\xa0», face à la mise «\xa0à l’arrêt\xa0» ou presque de la vie démocratique, les citoyens se retrouvent aujourd'hui «\xa0sans défense morale et politique\xa0». Sa réponse\xa0: une «\xa0désobéissance concertée\xa0».\n Voilà un an que nous vivons sous le «\xa0régime Covid\xa0». Un nouveau régime de relations sociales fait de perte du toucher, de disparition du festif, d’assèchement culturel et de reculs démocratiques. Un régime où le numérique s’impose à tous les niveaux, sans que l’impact écologique de cette mutation ne soit jamais interrogé.\r\n\r\nPour Matthieu Amiech, penseur de longue date du développement des technologies, celle-ci est pourtant profonde. En 2013, déjà, il alertait, dans un ouvrage collectif signé du groupe Marcuse (Mouvement autonome de réflexion critique à l’usage des survivants de l’économie), La Liberté dans le coma – Essai sur l’identification électronique et les motifs de s’y opposer, sur les menaces que fait peser la société numérique sur l’égalité et les libertés… 
+
+Annotation by LLMs -  actants, arguments, topics
+
+Annotation by LLMs - topics, summary
+
+Categorization of actants by LLMs
+
+Mapping actants & arguments
+https://drive.google.com/file/d/1X4NPrPBuLqzlQAemJmwR9sgHd0i7Ma7s/view?usp=sharing
+
+Clusters of arguments by year
+
+Detecting periods
+

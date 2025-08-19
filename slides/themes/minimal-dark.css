@@ -7,11 +7,13 @@
 @import 'default';
 
 :root {
-  --color-background: #2a2a2a;
+  --color-background: #1a3a3a;
   --color-foreground: #e6f2ff;
-  --color-heading: #d0d0d0;
-  --color-link: #5588bb;
+  --color-heading: #d0d0FF;
+  --color-link: #8263ff;
   --color-bluesky: #0478ec;
+  --color-white: #FFd8FF;
+  --color-red: #AA3a3a;
   --color-code-bg: #1e1e1e;
   --color-code-border: #404040;
   --color-accent: #666666;
@@ -22,7 +24,12 @@ section {
   color: var(--color-foreground);
   font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   line-height: 1.6;
-  padding: 60px;
+  padding: 30px;
+  padding-top: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
 }
 
 /* Headers - simple light gray */
@@ -118,7 +125,7 @@ blockquote {
 img {
   max-width: 100%;
   height: auto;
-  border-radius: 5px;
+  /* border-radius: 5px; */
 }
 
 /* Tables */
@@ -165,12 +172,34 @@ hr {
   margin: 20px 0;
 }
 
+.boom {
+  background: rgba(176, 44, 32, 0.2);
+  display: inline-block;
+  padding: 30px;
+  border: 3px solid darkorange;
+  text-align: center;
+  margin: 20px auto;
+  width: fit-content;
+}
+
 .note {
   background: rgba(102, 102, 102, 0.2);
   padding: 20px;
   border-radius: 5px;
   margin: 20px 0;
   border-left: 4px solid var(--color-accent);
+}
+
+.small {
+  font-size: 0.8em;
+}
+
+.small table {
+  font-size: 0.7em;
+}
+
+.small th, .small td {
+  padding: 6px;
 }
 
 /* Two-column layout */
@@ -201,20 +230,43 @@ section[data-theme="title"] h2 {
   color: var(--color-foreground);
 }
 
-/* Footer */
+/* Centered slide for single text */
+section.centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+}
+
+section.centered h1 {
+  color: var(--color-red);
+  margin: 0;
+  font-size: 3em;
+  padding-bottom: 200px;
+}
+
+/* Remove default footer */
 section::after {
-  content: attr(data-header) ' - ' attr(data-footer);
-  position: absolute;
-  bottom: 20px;
-  left: 60px;
-  right: 120px;
-  font-size: 14px;
-  color: var(--color-accent);
-  text-align: left;
+  display: none;
 }
 
 /* Page number positioning using Marp's pagination system */
 section {
   --paginate-color: var(--color-accent);
-  --paginate-position: right;
+}
+
+/* Custom footer positioning - right aligned at same level as page number */
+section > header,
+section > footer {
+  position: absolute;
+  bottom: 20px;
+  right: 60px;
+  left: auto;
+  font-size: 14px;
+  color: var(--color-accent);
+  text-align: right;
+  height: auto;
+  width: auto;
 }

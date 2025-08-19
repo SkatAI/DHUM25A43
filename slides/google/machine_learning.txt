@@ -1,0 +1,126 @@
+DHUM25A43 - 9
+Investigating with AI
+Machine Learning Algorithms
+01/04, 2025
+
+Discovering Machine Learning Algorithms
+What is Machine Learning?
+
+Systems that learn patterns from data
+
+Key types:
+
+Supervised Learning (prediction)
+
+Unsupervised Learning (exploration)
+
+
+SHS Example: Predicting voter turnout; Clustering interview transcripts
+
+https://drive.google.com/file/d/10_ENL_DvuYkWwcIbCHMvx6Ij26qBOKaO/view?usp=sharing
+
+Supervised Learning – Regression
+
+Algorithm: Linear Regression
+
+Goal: Predict continuous outcome (e.g., income, turnout rate)
+
+SHS Example: Predicting voter turnout based on age, income
+
+Visual: Plot with regression line on synthetic data
+
+Code snippet in Colab
+
+Supervised Learning – Classification (Part 1)
+
+Algorithm: Logistic Regression
+
+Goal: Predict category (yes/no, left/right)
+
+SHS Example: Classify political orientation based on survey data
+
+Visual: 2D classification plot
+
+Code snippet in Colab
+
+Supervised Learning – Classification (Part 2)
+
+Algorithms:
+
+Decision Tree (interpretable, rule-based)
+
+Random Forest (robust, ensemble)
+
+SHS Examples:
+
+Predict protest participation (Decision Tree)
+
+Classify opinion on policy (Random Forest)
+
+Visual: Decision boundaries from models
+
+Supervised Learning – Classification (Part 3)
+
+Algorithms:
+
+k-Nearest Neighbors (local similarity)
+
+Support Vector Machine (SVM, decision boundaries)
+
+SHS Example: Classify support for climate action based on sociodemographics
+
+Visual: 2D classification plots
+
+Train/Test Split – Evaluate the model
+
+Training set: used to teach the model.
+
+Test set: used to evaluate how well the model performs on new, unseen data.
+Precision: How many predicted positives were correct
+Recall: How many actual positives were correctly found
+Accuracy: How many predictions (positive & negative) were correct
+
+
+Unsupervised Learning – Clustering
+
+Unsupervised Learning – Clustering
+
+Algorithm: k-Means Clustering, Hierarchical clustering
+
+Goal: Find hidden groups in data
+
+SHS Example: Group citizens by shared attitudes on democracy
+
+Visual: Synthetic clustering example
+
+Unsupervised Learning – Dimensionality Reduction
+
+Algorithm: PCA (Principal Component Analysis)
+
+Goal: Reduce complexity, find main dimensions
+
+SHS Example: Reduce political ideology survey to key axes
+
+Visual: 2D projection of high-dimensional data
+
+Other Paradigms
+
+Neural Networks
+
+
+
+
+How can large language models (LLMs) be used effectively in practice?
+
+Manus
+Windsurf
+Colab + Gemini
+ChatGPT / Claude / Deepseek / Grok / Gemini
+Vibe Coding
+
+Prompting for Vibe Coding
+I have a DataFrame df containing a textual column called "text". I want to use an LLM (I’m using LLaMA models via Groq,) to extract the following elements from each text:
+Names of participants (e.g., people or organizations involved)
+Topics (general subjects or themes)
+Arguments (positions, reasoning, or opinions expressed)
+The extracted data should be stored in new columns within the same DataFrame. Please generate python code with comments

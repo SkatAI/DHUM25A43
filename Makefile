@@ -13,6 +13,6 @@ html: pretty
 
 
 watch:
-	find slides -name "*.md" | entr -s 'make html'
+	find slides -name "*.md" -o -path "slides/themes/*.css" | entr -s 'make html'
 
 dev: watch

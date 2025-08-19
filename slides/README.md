@@ -120,4 +120,3 @@ Important content here
 - **Institution**: Sciences Po
 - **Instructors**: Alexis Perrier, Andreï Mogoutov
 - **Discord**: https://discord.gg/DDbh5AyHYH
-

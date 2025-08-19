@@ -15,7 +15,7 @@
  * @theme minimal-dark
  * @author Alexis Perrier
  * @description Minimal Dark Theme - Clean and simple, no fancy effects
- */div#\:\$p>svg>foreignObject>:where(section):not([root]){--color-background:#2a2a2a;--color-foreground:#e6f2ff;--color-heading:#d0d0d0;--color-link:#5588bb;--color-bluesky:#0478ec;--color-code-bg:#1e1e1e;--color-code-border:#404040;--color-accent:#666666}div#\:\$p>svg>foreignObject>section{background:var(--color-background);color:var(--color-foreground);font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;line-height:1.6;padding:60px}
+ */div#\:\$p>svg>foreignObject>:where(section):not([root]){--color-background:#1a3a3a;--color-foreground:#e6f2ff;--color-heading:#d0d0FF;--color-link:#8263ff;--color-bluesky:#0478ec;--color-white:#FFd8FF;--color-red:#AA3a3a;--color-code-bg:#1e1e1e;--color-code-border:#404040;--color-accent:#666666}div#\:\$p>svg>foreignObject>section{background:var(--color-background);color:var(--color-foreground);font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;line-height:1.6;padding:30px;padding-top:0px;display:flex;flex-direction:column;justify-content:flex-start;align-items:stretch}
 
 /* Headers - simple light gray */div#\:\$p>svg>foreignObject>section :is(h1,marp-h1),div#\:\$p>svg>foreignObject>section :is(h2,marp-h2),div#\:\$p>svg>foreignObject>section :is(h3,marp-h3),div#\:\$p>svg>foreignObject>section :is(h4,marp-h4),div#\:\$p>svg>foreignObject>section :is(h5,marp-h5),div#\:\$p>svg>foreignObject>section :is(h6,marp-h6){color:var(--color-heading);font-weight:normal;margin-top:30px;margin-bottom:20px}div#\:\$p>svg>foreignObject>section :is(h1,marp-h1){font-size:2.5em;margin-bottom:30px;color:var(--color-bluesky)}div#\:\$p>svg>foreignObject>section :is(h2,marp-h2){font-size:2em;margin-top:40px}div#\:\$p>svg>foreignObject>section :is(h3,marp-h3){font-size:1.5em}
 
@@ -31,86 +31,109 @@
 
 /* Blockquotes */div#\:\$p>svg>foreignObject>section blockquote{border-left:4px solid var(--color-accent);margin:20px 0;padding:10px 20px;background:rgba(255,255,255,0.05);font-style:italic}
 
-/* Images */div#\:\$p>svg>foreignObject>section img{max-width:100%;height:auto;border-radius:5px}
+/* Images */div#\:\$p>svg>foreignObject>section img{max-width:100%;height:auto
+  /* border-radius: 5px; */}
 
 /* Tables */div#\:\$p>svg>foreignObject>section table{border-collapse:collapse;width:100%;margin:20px 0}div#\:\$p>svg>foreignObject>section td,div#\:\$p>svg>foreignObject>section th{border:1px solid var(--color-accent);padding:12px;text-align:left}div#\:\$p>svg>foreignObject>section th{background:var(--color-code-bg);color:var(--color-heading);font-weight:bold}
 
 /* Horizontal rules */div#\:\$p>svg>foreignObject>section hr{border:none;border-top:1px solid var(--color-accent);margin:30px 0}
 
-/* Utility classes */div#\:\$p>svg>foreignObject>section .center{text-align:center}div#\:\$p>svg>foreignObject>section .large{font-size:1.5em;font-weight:bold;color:var(--color-heading)}div#\:\$p>svg>foreignObject>section section.large{--marpit-root-font-size:1.5em}div#\:\$p>svg>foreignObject>section .highlight{background:rgba(85,136,187,0.2);padding:20px;border-radius:5px;margin:20px 0}div#\:\$p>svg>foreignObject>section .note{background:rgba(102,102,102,0.2);padding:20px;border-radius:5px;margin:20px 0;border-left:4px solid var(--color-accent)}
+/* Utility classes */div#\:\$p>svg>foreignObject>section .center{text-align:center}div#\:\$p>svg>foreignObject>section .large{font-size:1.5em;font-weight:bold;color:var(--color-heading)}div#\:\$p>svg>foreignObject>section section.large{--marpit-root-font-size:1.5em}div#\:\$p>svg>foreignObject>section .highlight{background:rgba(85,136,187,0.2);padding:20px;border-radius:5px;margin:20px 0}div#\:\$p>svg>foreignObject>section .boom{background:rgba(176,44,32,0.2);display:inline-block;padding:30px;border:3px solid darkorange;text-align:center;margin:20px auto;width:fit-content}div#\:\$p>svg>foreignObject>section .note{background:rgba(102,102,102,0.2);padding:20px;border-radius:5px;margin:20px 0;border-left:4px solid var(--color-accent)}div#\:\$p>svg>foreignObject>section .small{font-size:0.8em}div#\:\$p>svg>foreignObject>section section.small{--marpit-root-font-size:0.8em}div#\:\$p>svg>foreignObject>section .small table{font-size:0.7em}div#\:\$p>svg>foreignObject>section .small td,div#\:\$p>svg>foreignObject>section .small th{padding:6px}
 
 /* Two-column layout */div#\:\$p>svg>foreignObject>section .columns{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
 
 /* Title slide */div#\:\$p>svg>foreignObject>section[data-theme=title]{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}div#\:\$p>svg>foreignObject>section[data-theme=title] :is(h1,marp-h1){font-size:3.5em;margin:20px 0}div#\:\$p>svg>foreignObject>section[data-theme=title] :is(h2,marp-h2){font-size:2em;margin:20px 0;color:var(--color-foreground)}
 
-/* Footer */div#\:\$p>svg>foreignObject>section:after{
-  /* content: attr(data-header) ' - ' attr(data-footer); */position:absolute;bottom:20px;left:60px;right:120px;font-size:14px;color:var(--color-accent);text-align:left}div#\:\$p>svg>foreignObject>section:after{--marpit-root-font-size:14px}
+/* Centered slide for single text */div#\:\$p>svg>foreignObject>section.centered{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;height:100vh}div#\:\$p>svg>foreignObject>section.centered :is(h1,marp-h1){color:var(--color-red);margin:0;font-size:3em;padding-bottom:200px}
 
-/* Page number positioning using Marp's pagination system */div#\:\$p>svg>foreignObject>section{--paginate-color:var(--color-accent);--paginate-position:right}
-/* @theme ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r */div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background]{columns:initial!important;display:block!important;padding:0!important}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background]:after,div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background]:before,div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=content]:after,div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=content]:before{display:none!important}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]{all:initial;display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container][data-marpit-advanced-background-direction=vertical]{flex-direction:column}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split]>div[data-marpit-advanced-background-container]{width:var(--marpit-advanced-background-split,50%)}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split=right]>div[data-marpit-advanced-background-container]{margin-left:calc(100% - var(--marpit-advanced-background-split, 50%))}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]>figure{all:initial;background-position:center;background-repeat:no-repeat;background-size:cover;flex:auto;margin:0}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]>figure>figcaption{position:absolute;border:0;clip:rect(0,0,0,0);height:1px;margin:-1px;overflow:hidden;padding:0;white-space:nowrap;width:1px}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=content],div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=pseudo]{background:transparent!important}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=pseudo],div#\:\$p>svg[data-marpit-svg]>foreignObject[data-marpit-advanced-background=pseudo]{pointer-events:none!important}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background-split]{width:100%;height:100%}</style></head><body><div class="bespoke-marp-osc"><button data-bespoke-marp-osc="prev" tabindex="-1" title="Previous slide">Previous slide</button><span data-bespoke-marp-osc="page"></span><button data-bespoke-marp-osc="next" tabindex="-1" title="Next slide">Next slide</button><button data-bespoke-marp-osc="fullscreen" tabindex="-1" title="Toggle fullscreen (f)">Toggle fullscreen</button><button data-bespoke-marp-osc="presenter" tabindex="-1" title="Open presenter view (p)">Open presenter view</button></div><div id=":$p"><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="1" data-class="lead invert" data-header="Investigating with AI" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r" lang="en-GB" class="lead invert" style="--class:lead invert;--header:Investigating with AI;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r;">
-<header>Investigating with AI</header>
-<div class="columns">
+/* Remove default footer */div#\:\$p>svg>foreignObject>section:after{display:none}
+
+/* Page number positioning using Marp's pagination system */div#\:\$p>svg>foreignObject>section{--paginate-color:var(--color-accent)}
+
+/* Custom footer positioning - right aligned at same level as page number */div#\:\$p>svg>foreignObject>section>footer,div#\:\$p>svg>foreignObject>section>header{position:absolute;bottom:20px;right:60px;left:auto;font-size:14px;color:var(--color-accent);text-align:right;height:auto;width:auto}
+/* @theme b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp */div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background]{columns:initial!important;display:block!important;padding:0!important}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background]:after,div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background]:before,div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=content]:after,div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=content]:before{display:none!important}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]{all:initial;display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container][data-marpit-advanced-background-direction=vertical]{flex-direction:column}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split]>div[data-marpit-advanced-background-container]{width:var(--marpit-advanced-background-split,50%)}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split=right]>div[data-marpit-advanced-background-container]{margin-left:calc(100% - var(--marpit-advanced-background-split, 50%))}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]>figure{all:initial;background-position:center;background-repeat:no-repeat;background-size:cover;flex:auto;margin:0}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]>figure>figcaption{position:absolute;border:0;clip:rect(0,0,0,0);height:1px;margin:-1px;overflow:hidden;padding:0;white-space:nowrap;width:1px}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=content],div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=pseudo]{background:transparent!important}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=pseudo],div#\:\$p>svg[data-marpit-svg]>foreignObject[data-marpit-advanced-background=pseudo]{pointer-events:none!important}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background-split]{width:100%;height:100%}</style></head><body><div class="bespoke-marp-osc"><button data-bespoke-marp-osc="prev" tabindex="-1" title="Previous slide">Previous slide</button><span data-bespoke-marp-osc="page"></span><button data-bespoke-marp-osc="next" tabindex="-1" title="Next slide">Next slide</button><button data-bespoke-marp-osc="fullscreen" tabindex="-1" title="Toggle fullscreen (f)">Toggle fullscreen</button><button data-bespoke-marp-osc="presenter" tabindex="-1" title="Open presenter view (p)">Open presenter view</button></div><div id=":$p"><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="1" data-class="lead invert" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp" lang="en-GB" class="lead invert" style="--class:lead invert;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp;"><div class="columns">
 <div>
-<h1 id="investigating-with-ai">Investigating with AI</h1>
-<h2 id="dhum-25a43---fall-2025">DHUM 25A43 - Fall 2025</h2>
-<p>Bienvenue - Welcome</p>
+<h1 id="investigating-br-with-ai">Investigating <br />with AI</h1>
+<h2 id="dhum-25a43-br--fall-2025">DHUM 25A43 <br /> Fall 2025</h2>
 </div>
 <div>
 <p><img src="../img/Discord-QR-code.png" alt="center" style="width:400px;" /></p>
-<div class="center">
-Join the Discord
-</div>
+<p>Join the Discord</p>
 </div>
 </div>
 <footer>DHUM25A43 - <a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-class="lead invert" data-header="Investigating with AI" data-footer="DHUM25A43 - 28/01/25 - https://discord.gg/DDbh5AyHYH" data-theme="ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r" lang="en-GB" class="lead invert" style="--class:lead invert;--header:Investigating with AI;--footer:DHUM25A43 - 28/01/25 - https://discord.gg/DDbh5AyHYH;--theme:ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r;">
-<header>Investigating with AI</header>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-class="lead invert" data-footer="DHUM25A43  - https://discord.gg/DDbh5AyHYH" data-theme="b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp" lang="en-GB" class="lead invert" style="--class:lead invert;--footer:DHUM25A43  - https://discord.gg/DDbh5AyHYH;--theme:b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp;">
 <h1 id="discord">Discord</h1>
 
-<p><img src="../img/Discord-QR-code.png" alt="center" style="width:400px;" /></p>
 <ul>
-<li><strong>#sciencespo-DHUM25A43</strong></li>
+<li>Channel: <strong>#sciencespo-DHUM25A43</strong></li>
 <li><strong><a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></strong></li>
 </ul>
-<footer>DHUM25A43 - 28/01/25 - <a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></footer>
+<p><img src="../img/Discord-QR-code.png" alt="center" style="width:400px;" /></p>
+<footer>DHUM25A43  - <a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-class="lead invert" data-header="Investigating with AI" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r" lang="en-GB" class="lead invert" style="--class:lead invert;--header:Investigating with AI;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r;">
-<header>Investigating with AI</header>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-class="lead invert" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp" lang="en-GB" class="lead invert" style="--class:lead invert;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp;">
+<div class="columns">
+<div>
 <h1 id="who-am-i">Who am I?</h1>
 <h2 id="alexis-perrier">Alexis Perrier</h2>
 <ul>
 <li>PhD TelecomParis 95'</li>
-<li>Data scientist, author, teacher</li>
-<li><a href="mailto:alexis.perrier@gmail.com">alexis.perrier@gmail.com</a></li>
+<li>Developper,  Data scientist, author, teacher</li>
+<li>cycling, staying fit, scifi, ...</li>
 </ul>
-<p><img src="../img/LinkedIn_icon.svg.png" alt="" style="width:100px;" /> <img src="../img/X_logo_2023.svg.png" alt="" style="width:100px;" /> <img src="../img/Bluesky_Logo.svg.png" alt="" style="width:100px;" /></p>
+<p>I am a grateful nerd</p>
+</div>
+<div>
+<div style=" margin-top: 200px" class ="note">
+<p><a href="mailto:alexis.perrier@sciencespo.fr">alexis.perrier@sciencespo.fr</a></p>
+<p><img src="../img/LinkedIn_icon.svg.png" alt="" style="width:40px;" /> <a href="https://www.linkedin.com/in/alexisperrier/">alexisperrier</a><br />
+<img src="../img/Bluesky_Logo.svg.png" alt="" style="width:40px;" /> <a href="https://bsky.app/profile/alexisperrier.bsky.social">@alexisperrier.bsky.social</a><br />
+<img src="../img/X_logo_2023.svg.png" alt="" style="width:40px;" />  <a href="https://x.com/alexip">@alexip</a></p>
+</div>
+</div>
 </div>
 <footer>DHUM25A43 - <a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-class="center" data-header="Investigating with AI" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r" lang="en-GB" class="center" style="--class:center;--header:Investigating with AI;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r;">
-<header>Investigating with AI</header>
-
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-class="centered" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp" lang="en-GB" class="centered" style="--class:centered;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp;">
 <h1 id="the-course">The Course</h1>
 <footer>DHUM25A43 - <a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-class="lead invert" data-header="Investigating with AI" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r" lang="en-GB" class="lead invert" style="--class:lead invert;--header:Investigating with AI;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r;">
-<header>Investigating with AI</header>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-class="lead invert" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp" lang="en-GB" class="lead invert" style="--class:lead invert;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp;">
 <h1 id="what-is-this-course-about">What is this course about?</h1>
-<p><strong>Data Science for Social Sciences</strong>: Applying data science techniques to social science research.</p>
-<ul>
-<li><strong>Data Search and Collection</strong>: Searching, gathering, and transforming diverse datasets to create corpora and heterogeneous data collections.</li>
-<li><strong>Exploratory Data Analysis</strong>: Exploring textual content, categories, temporal evolution, extracting names, topics, and their relationships.</li>
-<li><strong>Qualitative and Quantitative Results</strong>: Combining qualitative insights with quantitative analysis and visual representation of findings.</li>
-<li><strong>Result Communication</strong>: Presenting outcomes through interactive documents and websites.</li>
-</ul>
+<p><strong>Data Science for Social Sciences using AI</strong>: Applying <em>data science</em> techniques to social science research.</p>
+<p><strong>Data Search and Collection</strong>: Searching, gathering, and transforming datasets.</p>
+<p><strong>Exploratory Data Analysis</strong>: Exploring textual content, categories, temporal evolution, extracting names, topics, and their relationships.</p>
+<p>Very data centric!</p>
 <footer>DHUM25A43 - <a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-class="lead invert" data-header="Investigating with AI" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r" lang="en-GB" class="lead invert" style="--class:lead invert;--header:Investigating with AI;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r;">
-<header>Investigating with AI</header>
-<h1 id="digital-investigations-with-ai-for-social-sciences">Digital investigations with AI for social sciences</h1>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-class="lead invert" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp" lang="en-GB" class="lead invert" style="--class:lead invert;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp;">
+<h1 id="what-do-you-do-with-all-that-data">What do you do with all that data?</h1>
+<p><strong>Data enrichment</strong>: Enriching datasets with additional information.</p>
+<p><strong>Qualitative and Quantitative Results</strong>: Combining qualitative insights with quantitative analysis and visual representation of findings. You analyze the data.</p>
+<p><strong>Data visualization</strong>: Presenting outcomes through interactive documents and websites. what's the story, what's the narrative?</p>
+<footer>DHUM25A43 - <a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-class="lead invert" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp" lang="en-GB" class="lead invert" style="--class:lead invert;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp;">
+<h1 id="what-is-this-course-about-1">What is this course about?</h1>
+<div class="boom">
+This is not : "investigating with data science"
+<br />
+It is : **investigating with AI**
+</div>
+<p><strong>AI</strong>: LLMS, Agents, prompting, vibe coding, ... going meta<br />
+<strong>hands on</strong>: projects, practice, learning by doing<br />
+<strong>Enlightment</strong>: Web, APIs, NLP, ML, DL, coding in python</p>
+<footer>DHUM25A43 - <a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-class="lead invert" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp" lang="en-GB" class="lead invert" style="--class:lead invert;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp;">
+<h1 id="why-ai">Why AI?</h1>
+<div class="note">
+LLM : large language models, aka agents, AIAgents,
+</div>
 <ul>
-<li><strong>Powerful LLMs</strong>: Revolutionizing data analysis, interpretation, and automation.</li>
+<li><strong>Super Powerful LLMs</strong>: Revolutionizing data analysis, interpretation, and automation.</li>
 <li><strong>Impact on Data Science</strong>: Enhancing efficiency, accuracy, and scalability of workflows.</li>
 <li><strong>Code Generation with LLM</strong>: Quickly develop data analysis pipelines</li>
 <li><strong>Use of LLMs as an Autonomous Data Analysis Tool</strong>: extract patterns, trends, and insights from raw data. Analysis of large datasets or documents</li>
@@ -118,234 +141,164 @@ Join the Discord
 </ul>
 <footer>DHUM25A43 - <a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-class="lead invert" data-header="Investigating with AI" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r" lang="en-GB" class="lead invert" style="--class:lead invert;--header:Investigating with AI;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r;">
-<header>Investigating with AI</header>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-class="lead invert" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp" lang="en-GB" class="lead invert" style="--class:lead invert;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp;">
 <h1 id="course-organization">Course Organization</h1>
-<ul>
-<li><strong>Project-Oriented Approach</strong>: Focus on applying concepts through real-world projects.</li>
-<li><strong>Workshop-Style Sessions</strong>: Interactive, hands-on learning environment.</li>
-<li><strong>Collaborative Work</strong>: Students work in groups to tackle selected themes and datasets.</li>
-<li><strong>Practical Focus</strong>: Emphasis on skills development through guided exercises and demos.</li>
-<li><strong>Professor Assistance</strong>: Direct support and feedback during project work.</li>
-</ul>
+<div class="boom">
+Practice, practice, practice
+</div>
+<p><strong>Project</strong></p>
+<p><strong>Hands on practice</strong></p>
+<p><strong>Collaborative Work</strong></p>
+<p><strong>Practical Focus</strong></p>
+</div>
 <footer>DHUM25A43 - <a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-class="lead invert" data-header="Investigating with AI" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r" lang="en-GB" class="lead invert" style="--class:lead invert;--header:Investigating with AI;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r;">
-<header>Investigating with AI</header>
-<h1 id="session-structure">Session Structure</h1>
-<p><strong>Theoretical Introduction</strong>: Present existing methods (no advanced math or equations) and new AI-assisted approaches.</p>
-<p><strong>Technical Demo</strong>: Showcase practical applications of the methods introduced.</p>
-<p><strong>Practical Student Work</strong>:</p>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-class="lead invert" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp" lang="en-GB" class="lead invert" style="--class:lead invert;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp;">
+<h1 id="session-flow">Session flow</h1>
 <ul>
-<li>Groups of 3-4 students collaborate on selected themes and datasets.</li>
-<li>Hands-on project development with guidance from professors.</li>
+<li>waking up, news review, coffee, questions (15mn)</li>
+<li>lecture, concepts, why and how (20mn)</li>
+<li>demo (30mn)</li>
+<li>cultural intermission (10mn)</li>
+<li>hands on practice / project work</li>
+<li>exit ticket: your <em>feedback</em> is <em>muy importante</em></li>
 </ul>
+<p>and <em>questions</em>, <strong>questions</strong>, and more questions</p>
+<p>support: discord!</p>
 <footer>DHUM25A43 - <a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-class="lead invert" data-header="Investigating with AI" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r" lang="en-GB" class="lead invert" style="--class:lead invert;--header:Investigating with AI;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r;">
-<header>Investigating with AI</header>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-class="lead invert" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp" lang="en-GB" class="lead invert" style="--class:lead invert;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp;">
 <h1 id="course-evaluation">Course Evaluation</h1>
 <ul>
-<li><strong>group note (80%)</strong></li>
-<li><strong>public presentation</strong></li>
-<li><strong>individual : (20%)</strong></li>
-<li><strong>critical reflexion on your work and experience with IA</strong></li>
-<li><strong>write a personal SWOT report on your work with AI and propositions</strong></li>
+<li>
+<p><strong>group note (80%)</strong>. website / report + public presentation</p>
+</li>
+<li>
+<p><strong>individual : (20%)</strong> critical reflexion on your work and experience with IA. write a personal report on your work with AI and propositions</p>
+</li>
 </ul>
 <footer>DHUM25A43 - <a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-class="lead invert" data-header="Investigating with AI" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r" lang="en-GB" class="lead invert" style="--class:lead invert;--header:Investigating with AI;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r;">
-<header>Investigating with AI</header>
-<h1 id="course-outline---timeline">Course outline - timeline</h1>
-<p><strong>We have 12 classes, 2h each</strong></p>
-<p><strong>We'll cover</strong></p>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-class="lead invert" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp" lang="en-GB" class="lead invert" style="--class:lead invert;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp;">
+<h1 id="scope">Scope</h1>
+<div class =boom>
+We have 12 classes, 2h each. Tuesday Mornings :).
+</div>
+<div class="columns">
+<div>
+<p><strong>AI:</strong></p>
 <ul>
-<li>Background on Web and API</li>
-<li>Data: how to collect and process</li>
-<li>Machine Learning : training models for prediction</li>
-<li>NLP : analyzing text to extract information</li>
 <li>AI &amp; LLMs</li>
+<li>major providers: OpenAI, Anthrropic, Mistral, Qwen, Google</li>
+<li>tools and services: Groq, Huggingface, Open Routers</li>
 <li>Agents : combining LLMs for agency</li>
 </ul>
+</div>
+<div>
+<p><strong>Tech knowledge &amp; culture:</strong></p>
+<ul>
+<li><em>Web</em>, <em>API</em></li>
+<li>Coding in <em>python</em></li>
+<li><em>Data</em>: how to collect and process</li>
+<li><em>NLP</em> : analyzing text to extract information</li>
+<li>Machine Learning, deep learning : training models for prediction</li>
+</ul>
+</div>
+</div>
 <footer>DHUM25A43 - <a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-class="lead invert" data-header="Investigating with AI" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r" lang="en-GB" class="lead invert" style="--class:lead invert;--header:Investigating with AI;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r;">
-<header>Investigating with AI</header>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-class="lead invert" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp" lang="en-GB" class="lead invert" style="--class:lead invert;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp;">
 <h1 id="tools">Tools</h1>
 <div class="columns">
 <div>
 <ul>
 <li><strong><a href="https://discord.gg/DDbh5AyHYH">discord</a></strong> for conversations</li>
-<li><strong><a href="https://drive.google.com">google drive</a></strong> for documents
-<ul>
-<li>course material
-<ul>
-<li>./slides</li>
-<li>./data</li>
-<li>./colab</li>
+<li><strong><a href="https://drive.google.com">github</a></strong> for documents</li>
+<li><strong><a href="https://colab.research.google.com/">Google colab</a></strong> notebooks for demos and practices</li>
 </ul>
-</li>
-<li>student projects
-<ul>
-<li>./projects</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><strong><a href="https://colab.research.google.com/">Google colab</a></strong> notebooks for work</li>
-</ul>
+<p><a href="https://github.com/SkatAI/DHUM25A43/">https://github.com/SkatAI/DHUM25A43/</a></p>
 </div>
 <div>
 <div class="highlight large center">
-All course material is available in google drive and on the discord channel
+All course material is available in github and on the discord channel
 </div>
 </div>
 </div>
 <footer>DHUM25A43 - <a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-class="center" data-header="Investigating with AI" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r" lang="en-GB" class="center" style="--class:center;--header:Investigating with AI;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r;">
-<header>Investigating with AI</header>
-
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-class="centered" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp" lang="en-GB" class="centered" style="--class:centered;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp;">
 <h1 id="course-project">Course Project</h1>
 <footer>DHUM25A43 - <a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-class="lead invert" data-header="Investigating with AI" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r" lang="en-GB" class="lead invert" style="--class:lead invert;--header:Investigating with AI;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r;">
-<header>Investigating with AI</header>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-class="lead invert" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp" lang="en-GB" class="lead invert" style="--class:lead invert;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp;">
 <h1 id="project-presentation">Project Presentation</h1>
-<h2 id="themes">Themes</h2>
+<p>You are a team of <em>data journalists</em>. Choose your topic, ask the questions, exploit the data.</p>
 <ul>
 <li>Climate change, energy</li>
+<li>Politics, social medias, sports, food</li>
 <li>AI - robotics</li>
 <li>Brain–computer interface</li>
-<li>Other issues…</li>
 <li>Data sources : media, social media, web, scientific publications, specific websites (<a href="https://cop28.com">COP</a>, <a href="https://imdb.com">IMDB</a>, <a href="https://wikipedia.org">wikipedia</a>, Kaggle <a href="https://kaggle.com/datasets">datasets</a>)</li>
 </ul>
-<p><strong>Comment 1</strong> : These topics focus on future-oriented challenges and opportunities</p>
-<p><strong>Comment 2</strong> : The issues are very broad; we need to refine them into precise research questions or subtopics to ensure project feasibility and a reasonable dataset size.</p>
 <footer>DHUM25A43 - <a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-class="lead invert" data-header="Investigating with AI" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r" lang="en-GB" class="lead invert" style="--class:lead invert;--header:Investigating with AI;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r;">
-<header>Investigating with AI</header>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-class="lead invert" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp" lang="en-GB" class="lead invert" style="--class:lead invert;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp;">
 <h1 id="project-organization">Project Organization</h1>
+<p><strong>Goal: Create a Website</strong>. Design an engaging platform to showcase your report.</p>
 <ul>
 <li>Find and Formulate Research Questions</li>
 <li>Initial Validation of Projects - Feasibility Check, Relevance</li>
-<li><strong>Goal: Create a Website</strong>: Design an engaging platform to showcase your report.</li>
-<li><strong>Creative Formats</strong>: Present findings as a report or in unique forms, such as a movie script or other innovative approaches.</li>
 <li>Publish the website</li>
-<li>Organization: 3 to 4, groups with complementary skills</li>
+<li>Organization: 2 to 4, groups with complementary skills</li>
 <li>Evaluation, expectations</li>
 <li>Primary exposé after a few classes</li>
 <li>Last class: final exposé in front of class and experts</li>
 </ul>
 <footer>DHUM25A43 - <a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-class="lead invert" data-header="Investigating with AI" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r" lang="en-GB" class="lead invert" style="--class:lead invert;--header:Investigating with AI;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r;">
-<header>Investigating with AI</header>
-<h1 id="project">Project</h1>
-<p><strong>Start thinking about your project</strong></p>
-<p><strong>Share your project definition</strong></p>
-<p><strong>Create your team</strong></p>
-<footer>DHUM25A43 - <a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-class="center" data-header="Investigating with AI" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r" lang="en-GB" class="center" style="--class:center;--header:Investigating with AI;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r;">
-<header>Investigating with AI</header>
-
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-class="highlight" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp" lang="en-GB" class="highlight" style="--class:highlight;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp;">
 <h1 id="getting-to-know-you">Getting to know you</h1>
+<p>We'd like to know a bit more about you</p>
+<p>All questions are optional (except your email)</p>
+<p>Please fill out this form<br />
+<a href="https://forms.gle/1ksP3qtAk2F5N2gT8">https://forms.gle/1ksP3qtAk2F5N2gT8</a></p>
 <footer>DHUM25A43 - <a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-class="lead invert" data-header="Investigating with AI" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r" lang="en-GB" class="lead invert" style="--class:lead invert;--header:Investigating with AI;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r;">
-<header>Investigating with AI</header>
-<h1 id="please-fill-out-this-form">Please fill out this form</h1>
-<p><strong>We'd like to know a bit more about you</strong></p>
-<p><strong>So that we can adapt the course to meet your expectations</strong></p>
-<p><strong>All questions are optional (except your email)</strong></p>
-<p><a href="https://forms.gle/1ksP3qtAk2F5N2gT8">https://forms.gle/1ksP3qtAk2F5N2gT8</a></p>
-<footer>DHUM25A43 - <a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-class="center" data-header="Investigating with AI" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r" lang="en-GB" class="center" style="--class:center;--header:Investigating with AI;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r;">
-<header>Investigating with AI</header>
-
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-class="centered" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp" lang="en-GB" class="centered" style="--class:centered;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp;">
 <h1 id="state-of-ai">State of AI</h1>
 <footer>DHUM25A43 - <a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-class="lead invert" data-header="Investigating with AI" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r" lang="en-GB" class="lead invert" style="--class:lead invert;--header:Investigating with AI;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r;">
-<header>Investigating with AI</header>
-<h1 id="a-thorough-recap-of-2024">A Thorough Recap of 2024</h1>
-<p><strong>Things we learned about LLMs in 2024</strong></p>
-<p>by <a href="https://simonwillison.net/">Simon Willison</a>.</p>
-<div class="note">
-A lot has happened in the world of Large Language Models over the course of 2024. Here's a review of things we figured out about the field in the past twelve months, plus my attempt at identifying key themes and pivotal moments.
-</div>
-<footer>DHUM25A43 - <a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-class="lead invert" data-header="Investigating with AI" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r" lang="en-GB" class="lead invert" style="--class:lead invert;--header:Investigating with AI;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r;">
-<header>Investigating with AI</header>
-<h1 id="over-120-new-models-released-in-2024">Over 120 new models released in 2024!</h1>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-class="lead invert" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp" lang="en-GB" class="lead invert" style="--class:lead invert;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp;">
+<h1 id="new-ai-models-every-week">New AI models every week</h1>
 <p><strong>Released Models 2024</strong></p>
 <ul>
 <li><strong>Open Source Models: 55</strong></li>
 <li><strong>API Only Models: 63</strong></li>
 </ul>
-<p><a href="https://huggingface.co/spaces/reach-vb/2024-ai-timeline"><strong>2024 AI Timeline</strong></a><br />
-<em>a Hugging Face Space</em></p>
+<p><a href="https://huggingface.co/spaces/reach-vb/2024-ai-timeline"><strong>2024 AI Timeline</strong></a></p>
 <footer>DHUM25A43 - <a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-class="lead invert" data-header="Investigating with AI" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r" lang="en-GB" class="lead invert" style="--class:lead invert;--header:Investigating with AI;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r;">
-<header>Investigating with AI</header>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-class="lead invert" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp" lang="en-GB" class="lead invert" style="--class:lead invert;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp;">
+<h1 id="2025">2025</h1>
+<ul>
+<li>GPT-5 (OpenAI), August 7, 2025, GPT‑5 is OpenAI's most advanced and unified model yet</li>
+<li>Claude 4 (Anthropic) – Opus 4 &amp; Sonnet 4.  May 22, 2025, long-horizon reasoning, superior coding and memory features</li>
+<li>DeepSeek-R1 (DeepSeek), January 20, 2025</li>
+<li>Grok 4  (xAI), July 9, 2025</li>
+<li>Veo 3 (May 20, 2025), text-to-video generator. also produces synchronized audio—marking</li>
+<li>Solar Pro 2 by Upstage (South Korea)</li>
+</ul>
+<footer>DHUM25A43 - <a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-class="lead invert" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp" lang="en-GB" class="lead invert" style="--class:lead invert;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp;">
 <h1 id="chatbot-arena-llms-vs-llms">Chatbot Arena: LLMs vs LLMs</h1>
 <p><strong>Where LLMs compete</strong> <a href="https://lmarena.ai/?leaderboard">https://lmarena.ai/?leaderboard</a></p>
 <div class="note">
-Total #models: 194. Total #votes: 2,557,144. Last updated: 2025-01-20.
-<p>Creative Writing: #models: 190 (98%) #votes: 385,176 (15%)</p>
+Total #models: 229. Total #votes: 4M
 </div>
 <footer>DHUM25A43 - <a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-class="lead invert" data-header="Investigating with AI" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r" lang="en-GB" class="lead invert" style="--class:lead invert;--header:Investigating with AI;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r;">
-<header>Investigating with AI</header>
-<h1 id="2024">2024</h1>
-<p><strong>70 models from 18 organizations are now <a href="https://lmarena.ai/?leaderboard">performing</a> better than GPT4</strong></p>
-<ul>
-<li>GPT-4 level models run on a laptop (not mine tho)</li>
-<li>Multimodal vision is common, audio and video are starting to emerge</li>
-<li>Prices have dropped =&gt; less energy</li>
-<li>EU AI act</li>
-</ul>
-<footer>DHUM25A43 - <a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-class="lead invert" data-header="Investigating with AI" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r" lang="en-GB" class="lead invert" style="--class:lead invert;--header:Investigating with AI;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r;">
-<header>Investigating with AI</header>
-<h1 id="benchmarks">Benchmarks</h1>
-<div class="columns">
-<div>
-<ul>
-<li><strong>The Massive Multitask Language Understanding (<a href="https://arxiv.org/abs/2009.03300">MMLU</a>)</strong> : range of exam questions on academic subjects.</li>
-<li><strong><a href="https://github.com/google/BIG-bench">BIG-bench</a></strong> : Beyond the Imitation Game</li>
-<li><strong><a href="https://arxiv.org/abs/2311.12022">GPQA Diamond</a></strong>: harder still, google proof,
-<ul>
-<li>PhDs domain experts reach 74% accuracy</li>
-</ul>
-</li>
-<li><strong><a href="https://livebench.ai/">LiveBench</a></strong>: avoid contamination</li>
-</ul>
-<p>and many others</p>
-<ul>
-<li><strong><a href="https://humanityslastexam.ai/">Humanity's Last Exam</a></strong></li>
-<li><strong><a href="https://culturevm.ai/">CultureVLM</a></strong></li>
-<li><strong>…</strong></li>
-</ul>
-</div>
-<div>
-<div class="highlight large">
-It's becoming harder to find tasks that are difficult enough for the LLMs.
-</div>
-<p><strong>Connections — The New York Times</strong></p>
-</div>
-</div>
-<footer>DHUM25A43 - <a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-class="lead invert" data-header="Investigating with AI" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r" lang="en-GB" class="lead invert" style="--class:lead invert;--header:Investigating with AI;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r;">
-<header>Investigating with AI</header>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-class="lead invert" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp" lang="en-GB" class="lead invert" style="--class:lead invert;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp;">
 <h1 id="ai-vs-humans-march-2023">AI vs Humans (March 2023)</h1>
 <p><a href="https://www.maximusai.com/blog/how-smart-is-chatgpt"><strong>How Smart is ChatGPT?</strong></a></p>
 <div class="note">
@@ -355,120 +308,18 @@ GPT 4.0 has made impressive strides over GPT 3.5 but continues to struggle in ce
 </div>
 <footer>DHUM25A43 - <a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" data-class="lead invert" data-header="Investigating with AI" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r" lang="en-GB" class="lead invert" style="--class:lead invert;--header:Investigating with AI;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r;">
-<header>Investigating with AI</header>
-<h1 id="augmented-llms">Augmented LLMs</h1>
-<div class="highlight large center">
-It's no longer just about the model
-</div>
-<ul>
-<li><img class="emoji" draggable="false" alt="🔍" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f50d.svg" data-marp-twemoji=""/> <strong>Web browsing</strong></li>
-<li><img class="emoji" draggable="false" alt="📚" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f4da.svg" data-marp-twemoji=""/> <strong>File upload - projects - knowledge base</strong></li>
-<li><img class="emoji" draggable="false" alt="🧠" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f9e0.svg" data-marp-twemoji=""/> <strong>Dynamic memory</strong></li>
-<li><img class="emoji" draggable="false" alt="👁" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f441.svg" data-marp-twemoji=""/> <strong>Streaming</strong></li>
-<li><img class="emoji" draggable="false" alt="🖐" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f590.svg" data-marp-twemoji=""/> <strong>Function calling</strong></li>
-<li><img class="emoji" draggable="false" alt="💋" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f48b.svg" data-marp-twemoji=""/> <strong>speech</strong></li>
-<li><img class="emoji" draggable="false" alt="🥸" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f978.svg" data-marp-twemoji=""/> <strong>voice</strong></li>
-</ul>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-class="lead invert" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp" lang="en-GB" class="lead invert" style="--class:lead invert;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp;">
+<h1 id="2025-humans-are-doomed">2025 humans are doomed</h1>
+<p><a href="https://www.nytimes.com/2025/07/21/technology/google-ai-international-mathematics-olympiad.html">Google A.I. System Wins Gold Medal in International Math Olympiad</a></p>
+<p><a href="https://x.com/alexwei_/status/1946477742855532918">AI achieves gold medal</a> solving International Mathematical Olympiad problems</p>
+<p>two 4.5 hour exam sessions, no tools or internet, reading the official problem statements, and writing natural language proofs.</p>
 <footer>DHUM25A43 - <a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26" data-class="lead invert" data-header="Investigating with AI" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r" lang="en-GB" class="lead invert" style="--class:lead invert;--header:Investigating with AI;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r;">
-<header>Investigating with AI</header>
-<h1 id="2025">2025 ?</h1>
-<div style="color: red; font-weight: bold;">weekly updates</div>
-<ul>
-<li>Models: DeepSeek-R1, OpenAI o3</li>
-<li>Stargate project ?!</li>
-<li>China vs US</li>
-<li>Massive deployment of AI in all Google and Microsoft services</li>
-<li>Platform evolutions : Anthropic, OpenAI, Gemini, …
-<ul>
-<li>more features, connections, memory, protocols</li>
-</ul>
-</li>
-</ul>
-<footer>DHUM25A43 - <a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27" data-class="lead invert" data-header="Investigating with AI" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r" lang="en-GB" class="lead invert" style="--class:lead invert;--header:Investigating with AI;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r;">
-<header>Investigating with AI</header>
-<h1 id="2025-1">2025 ?</h1>
-<p><strong>Ethan Mollick</strong> : <a href="https://www.oneusefulthing.org/p/which-ai-to-use-now-an-updated-opinionated">Which AI to Use Now: An Updated Opinionated Guide</a></p>
-<div class="note">
-Comparison table showing different AI services, their capabilities, and recommended use cases.
-</div>
-<footer>DHUM25A43 - <a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28" data-class="center" data-header="Investigating with AI" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r" lang="en-GB" class="center" style="--class:center;--header:Investigating with AI;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r;">
-<header>Investigating with AI</header>
-
-<h1 id="emergence">Emergence</h1>
-<footer>DHUM25A43 - <a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29" data-class="lead invert" data-header="Investigating with AI" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r" lang="en-GB" class="lead invert" style="--class:lead invert;--header:Investigating with AI;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r;">
-<header>Investigating with AI</header>
-<h1 id="emergence-1">Emergence</h1>
-<p><strong>Complex systems exhibit properties or behaviors that are not reducible to their individual components.</strong></p>
-<div class="columns">
-<div>
-<p><strong>Strong Emergence</strong>: raises the possibility of truly intelligent machines!</p>
-<ul>
-<li>The observed abilities are <strong>genuinely novel</strong>, irreducible to the individual components or algorithms of the LLM.</li>
-<li>the <strong>wetness of water</strong> isn't found in individual water molecules.</li>
-</ul>
-<p><strong>Weak Emergence</strong>: sophisticated but fundamentally different from human intelligence</p>
-<ul>
-<li>The observed abilities can still be <strong>explained</strong> by the underlying mechanisms,</li>
-<li>But their appearance is unexpected and simply difficult to predict.</li>
-<li>~ modeling <strong>traffic patterns</strong> using the behavior of individual cars.</li>
-</ul>
-</div>
-<div>
-<p><img src="../img/576px-Termite_Cathedral_DSC03570.jpg" alt="" style="width:400px;" /></p>
-<p><em>A termite &quot;cathedral&quot; mound produced by a termite colony offers a classic example of emergence in nature.</em></p>
-<p><a href="https://en.wikipedia.org/wiki/Emergence">https://en.wikipedia.org/wiki/Emergence</a></p>
-</div>
-</div>
-<footer>DHUM25A43 - <a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30" data-class="lead invert" data-header="Investigating with AI" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r" lang="en-GB" class="lead invert" style="--class:lead invert;--header:Investigating with AI;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r;">
-<header>Investigating with AI</header>
-<h1 id="emergence---jason-wei---openai">Emergence - Jason Wei - OpenAI</h1>
-<p><a href="https://arxiv.org/abs/2206.07682"><strong>137 emergent abilities of large language models — Jason Wei</strong></a></p>
-<p><strong>As the size of the model increases, we see sudden improvements in its performance on certain tasks</strong></p>
-<p><strong>for instance 3 digit addition</strong></p>
-<p><strong>gradually increase size of model</strong></p>
-<ul>
-<li>errors, errors, …, errors, …</li>
-</ul>
-<p><strong>and then suddenly</strong></p>
-<ul>
-<li>correct</li>
-</ul>
-<footer>DHUM25A43 - <a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="31" data-class="lead invert" data-header="Investigating with AI" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r" lang="en-GB" class="lead invert" style="--class:lead invert;--header:Investigating with AI;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r;">
-<header>Investigating with AI</header>
-<h1 id="llms-you-can-use">LLMs you can use</h1>
-<ul>
-<li>Gemini (Colab)</li>
-<li>Gemini (aistudio.google.com)</li>
-<li>chatGPT (with memory)</li>
-<li>DeepSeek</li>
-<li>Claude.ai, (create a project)</li>
-<li>Gemini</li>
-<li>LLama</li>
-<li>…</li>
-</ul>
-<footer>DHUM25A43 - <a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="32" data-class="center" data-header="Investigating with AI" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r" lang="en-GB" class="center" style="--class:center;--header:Investigating with AI;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r;">
-<header>Investigating with AI</header>
-
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-class="centered" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp" lang="en-GB" class="centered" style="--class:centered;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp;">
 <h1 id="google-colab">Google Colab</h1>
 <footer>DHUM25A43 - <a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="33" data-class="lead invert" data-header="Investigating with AI" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r" lang="en-GB" class="lead invert" style="--class:lead invert;--header:Investigating with AI;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r;">
-<header>Investigating with AI</header>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" data-class="lead invert" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp" lang="en-GB" class="lead invert" style="--class:lead invert;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp;">
 <h1 id="google-colab-1">Google Colab</h1>
 <div class="highlight">
 Like google docs but also for executing code
@@ -482,8 +333,7 @@ Like google docs but also for executing code
 <p><a href="https://colab.research.google.com/">https://colab.research.google.com/</a></p>
 <footer>DHUM25A43 - <a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="34" data-class="lead invert" data-header="Investigating with AI" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r" lang="en-GB" class="lead invert" style="--class:lead invert;--header:Investigating with AI;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r;">
-<header>Investigating with AI</header>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26" data-class="lead invert" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp" lang="en-GB" class="lead invert" style="--class:lead invert;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp;">
 <h1 id="text-with-markdown">Text with Markdown</h1>
 <div class="columns">
 <div>
@@ -507,82 +357,76 @@ Like google docs but also for executing code
 </div>
 <footer>DHUM25A43 - <a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="35" data-class="center" data-header="Investigating with AI" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r" lang="en-GB" class="center" style="--class:center;--header:Investigating with AI;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r;">
-<header>Investigating with AI</header>
-
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27" data-class="centered" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp" lang="en-GB" class="centered" style="--class:centered;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp;">
+<h1 id="questions">Questions</h1>
+<footer>DHUM25A43 - <a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28" data-class="centered" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp" lang="en-GB" class="centered" style="--class:centered;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp;">
+<h1 id="intermission">Intermission</h1>
+<footer>DHUM25A43 - <a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29" data-class="centered" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp" lang="en-GB" class="centered" style="--class:centered;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp;">
 <h1 id="demo">Demo</h1>
+<p>markdown and code in colab</p>
 <footer>DHUM25A43 - <a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="36" data-class="lead invert" data-header="Investigating with AI" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r" lang="en-GB" class="lead invert" style="--class:lead invert;--header:Investigating with AI;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r;">
-<header>Investigating with AI</header>
-<h1 id="movie-analysis">Movie Analysis</h1>
-<p><strong>The dataset is available in the shared folder in google drive (csv file, google spreadsheet)</strong></p>
-<p><strong>It contains information of a 1000 movies</strong></p>
-<ul>
-<li>title</li>
-<li>description</li>
-<li>ranking (imdb, Meta)</li>
-<li>duration</li>
-<li>genres</li>
-<li>actors, director</li>
-<li>revenue</li>
-</ul>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30" data-class="lead invert" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp" lang="en-GB" class="lead invert" style="--class:lead invert;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp;">
 <footer>DHUM25A43 - <a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="37" data-class="lead invert" data-header="Investigating with AI" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r" lang="en-GB" class="lead invert" style="--class:lead invert;--header:Investigating with AI;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r;">
-<header>Investigating with AI</header>
-<h1 id="demo-1">Demo</h1>
-<ol>
-<li><strong>create a new notebook</strong></li>
-<li><strong>upload the csv file</strong></li>
-<li><strong>ask Gemini to</strong><br />
-a. load the data<br />
-b. analyze the data<br />
-c. suggest &amp; explain<br />
-d. extract information from the movie description<br />
-e. save the new data</li>
-<li><strong>share the notebook</strong></li>
-</ol>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="31" data-class="centered" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp" lang="en-GB" class="centered" style="--class:centered;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp;">
+<h1 id="your-turn">Your turn</h1>
+<footer>DHUM25A43 - <a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="32" data-class="lead invert" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp" lang="en-GB" class="lead invert" style="--class:lead invert;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp;">
+<h1 id="google-colab-practice">Google colab practice</h1>
+<p>simple exercise on google colab</p>
+<p>markdown and code<br />
+loading data<br />
+exploring data</p>
+<p><a href="https://github.com/SkatAI/DHUM25A43/blob/master/practice/01_google_colab.md">practice: 01_google_colab.md</a></p>
 <p><strong>Example of analysis notebook:</strong><br />
 <a href="https://colab.research.google.com/drive/1KWmqZRSg7O2gJEWtY8NroUYX68TLkEL9#scrollTo=yoLD0yLL0Phc">https://colab.research.google.com/drive/1KWmqZRSg7O2gJEWtY8NroUYX68TLkEL9#scrollTo=yoLD0yLL0Phc</a></p>
 <footer>DHUM25A43 - <a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="38" data-class="center" data-header="Investigating with AI" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r" lang="en-GB" class="center" style="--class:center;--header:Investigating with AI;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r;">
-<header>Investigating with AI</header>
-
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="33" data-class="centered" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp" lang="en-GB" class="centered" style="--class:centered;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp;">
+<h1 id="for-next-week">for next week</h1>
+<footer>DHUM25A43 - <a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="34" data-class="lead invert" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp" lang="en-GB" class="lead invert" style="--class:lead invert;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp;">
+<ul>
+<li>project : start thinking about your project, topic, team mates, data sources, research questions</li>
+<li>exit ticket</li>
+</ul>
+<p><a href="https://forms.gle/9eE9PUR6mFC2szq47">https://forms.gle/9eE9PUR6mFC2szq47</a></p>
+<footer>DHUM25A43 - <a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="35" data-class="centered" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp" lang="en-GB" class="centered" style="--class:centered;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp;">
 <h1 id="next-time">Next time</h1>
 <footer>DHUM25A43 - <a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="39" data-class="lead invert" data-header="Investigating with AI" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r" lang="en-GB" class="lead invert" style="--class:lead invert;--header:Investigating with AI;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r;">
-<header>Investigating with AI</header>
-<h1 id="colab-and-ai">Colab and AI</h1>
-<p><strong>In Colab</strong></p>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="36" data-class="lead invert" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp" lang="en-GB" class="lead invert" style="--class:lead invert;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp;">
 <ul>
-<li>Load a dataset</li>
-<li>prompt Gemini on what questions you can ask on this dataset</li>
-<li>prompt Gemini to create the code to answer your questions</li>
+<li>Topic: Web and APIs</li>
+<li>Practice : data formats and the pandas library</li>
 </ul>
 <footer>DHUM25A43 - <a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="40" data-class="lead invert" data-header="Investigating with AI" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r" lang="en-GB" class="lead invert" style="--class:lead invert;--header:Investigating with AI;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r;">
-<header>Investigating with AI</header>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="37" data-class="lead invert" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp" lang="en-GB" class="lead invert" style="--class:lead invert;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp;">
 <h1 id="create-your-project">Create your Project</h1>
 <ul>
 <li><strong>Create your team</strong></li>
 <li><strong>Define your project</strong></li>
 <li><strong>Share your project definition</strong></li>
-<li><strong>Announce on the discord channel #sciencespo-dhum25a43 and we will create the related drive folders and subchannels</strong></li>
 </ul>
 <footer>DHUM25A43 - <a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="41" data-class="lead invert" data-header="Investigating with AI" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r" lang="en-GB" class="lead invert" style="--class:lead invert;--header:Investigating with AI;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:ev3l6nadnx6csdmdpmyki6m5m9frohoph2iplxxkd4r;">
-<header>Investigating with AI</header>
-<h1 id="need-help">Need help ?</h1>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="38" data-class="lead invert" data-footer="DHUM25A43 - https://discord.gg/DDbh5AyHYH" data-theme="b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp" lang="en-GB" class="lead invert" style="--class:lead invert;--footer:DHUM25A43 - https://discord.gg/DDbh5AyHYH;--theme:b8e06lnesqplc7scb2l8zhb8h4mj16c7tx62af0omp;">
+<h1 id="need-help--got-a-question--share-something">Need help ? Got a question ? Share something ?</h1>
 <ol>
 <li><strong>Ask an LLM</strong></li>
-<li><strong>We are available on discord</strong><br />
-a. if possible, please post in the course channel #sciencespo-dhum25a43 not in private messages, so all can contribute</li>
+<li><strong>We are available on discord</strong></li>
 </ol>
+<p>Please post in the course channel #sciencespo-dhum25a43 not in private messages, so all can contribute</p>
 <footer>DHUM25A43 - <a href="https://discord.gg/DDbh5AyHYH">https://discord.gg/DDbh5AyHYH</a></footer>
 </section>
 <script>!function(){"use strict";const t={h1:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"1"},style:"display: block; font-size: 2em; margin-block-start: 0.67em; margin-block-end: 0.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h2:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"2"},style:"display: block; font-size: 1.5em; margin-block-start: 0.83em; margin-block-end: 0.83em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h3:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"3"},style:"display: block; font-size: 1.17em; margin-block-start: 1em; margin-block-end: 1em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h4:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"4"},style:"display: block; margin-block-start: 1.33em; margin-block-end: 1.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h5:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"5"},style:"display: block; font-size: 0.83em; margin-block-start: 1.67em; margin-block-end: 1.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h6:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"6"},style:"display: block; font-size: 0.67em; margin-block-start: 2.33em; margin-block-end: 2.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},span:{proto:()=>HTMLSpanElement},pre:{proto:()=>HTMLElement,style:"display: block; font-family: monospace; white-space: pre; margin: 1em 0; --marp-auto-scaling-white-space: pre;"}},e="data-marp-auto-scaling-wrapper",i="data-marp-auto-scaling-svg",n="data-marp-auto-scaling-container";class s extends HTMLElement{constructor(){super(),this.svgPreserveAspectRatio="xMinYMid meet";const t=t=>([e])=>{const{width:i,height:n}=e.contentRect;this[t]={width:i,height:n},this.updateSVGRect()};this.attachShadow({mode:"open"}),this.containerObserver=new ResizeObserver(t("containerSize")),this.wrapperObserver=new ResizeObserver(((...e)=>{t("wrapperSize")(...e),this.flushSvgDisplay()}))}static get observedAttributes(){return["data-downscale-only"]}connectedCallback(){var t,s,o,r,a;this.shadowRoot.innerHTML=`\n<style>\n  svg[${i}] { display: block; width: 100%; height: auto; vertical-align: top; }\n  span[${n}] { display: table; white-space: var(--marp-auto-scaling-white-space, nowrap); width: max-content; }\n</style>\n<div ${e}>\n  <svg part="svg" ${i}>\n    <foreignObject><span ${n}><slot></slot></span></foreignObject>\n  </svg>\n</div>\n    `.split(/\n\s*/).join(""),this.wrapper=null!==(t=this.shadowRoot.querySelector(`div[${e}]`))&&void 0!==t?t:void 0;const l=this.svg;this.svg=null!==(o=null===(s=this.wrapper)||void 0===s?void 0:s.querySelector(`svg[${i}]`))&&void 0!==o?o:void 0,this.svg!==l&&(this.svgComputedStyle=this.svg?window.getComputedStyle(this.svg):void 0),this.container=null!==(a=null===(r=this.svg)||void 0===r?void 0:r.querySelector(`span[${n}]`))&&void 0!==a?a:void 0,this.observe()}disconnectedCallback(){this.svg=void 0,this.svgComputedStyle=void 0,this.wrapper=void 0,this.container=void 0,this.observe()}attributeChangedCallback(){this.observe()}flushSvgDisplay(){const{svg:t}=this;t&&(t.style.display="inline",requestAnimationFrame((()=>{t.style.display=""})))}observe(){this.containerObserver.disconnect(),this.wrapperObserver.disconnect(),this.wrapper&&this.wrapperObserver.observe(this.wrapper),this.container&&this.containerObserver.observe(this.container),this.svgComputedStyle&&this.observeSVGStyle(this.svgComputedStyle)}observeSVGStyle(t){const e=()=>{const i=(()=>{const e=t.getPropertyValue("--preserve-aspect-ratio");if(e)return e.trim();return`x${(({textAlign:t,direction:e})=>{if(t.endsWith("left"))return"Min";if(t.endsWith("right"))return"Max";if("start"===t||"end"===t){let i="rtl"===e;return"end"===t&&(i=!i),i?"Max":"Min"}return"Mid"})(t)}YMid meet`})();i!==this.svgPreserveAspectRatio&&(this.svgPreserveAspectRatio=i,this.updateSVGRect()),t===this.svgComputedStyle&&requestAnimationFrame(e)};e()}updateSVGRect(){var t,e,i,n,s,o,r;let a=Math.ceil(null!==(e=null===(t=this.containerSize)||void 0===t?void 0:t.width)&&void 0!==e?e:0);const l=Math.ceil(null!==(n=null===(i=this.containerSize)||void 0===i?void 0:i.height)&&void 0!==n?n:0);void 0!==this.dataset.downscaleOnly&&(a=Math.max(a,null!==(o=null===(s=this.wrapperSize)||void 0===s?void 0:s.width)&&void 0!==o?o:0));const c=null===(r=this.svg)||void 0===r?void 0:r.querySelector(":scope > foreignObject");if(null==c||c.setAttribute("width",`${a}`),null==c||c.setAttribute("height",`${l}`),this.svg&&(this.svg.setAttribute("viewBox",`0 0 ${a} ${l}`),this.svg.setAttribute("preserveAspectRatio",this.svgPreserveAspectRatio),this.svg.style.height=a<=0||l<=0?"0":""),this.container){const t=this.svgPreserveAspectRatio.toLowerCase();this.container.style.marginLeft=t.startsWith("xmid")||t.startsWith("xmax")?"auto":"0",this.container.style.marginRight=t.startsWith("xmi")?"auto":"0"}}}const o=(t,{attrs:e={},style:i})=>class extends t{constructor(...t){super(...t);for(const[t,i]of Object.entries(e))this.hasAttribute(t)||this.setAttribute(t,i);this.attachShadow({mode:"open"})}static get observedAttributes(){return["data-auto-scaling"]}connectedCallback(){this._update()}attributeChangedCallback(){this._update()}_update(){const t=i?`<style>:host { ${i} }</style>`:"";let e="<slot></slot>";const{autoScaling:n}=this.dataset;if(void 0!==n){e=`<marp-auto-scaling exportparts="svg:auto-scaling" ${"downscale-only"===n?"data-downscale-only":""}>${e}</marp-auto-scaling>`}this.shadowRoot.innerHTML=t+e}};let r;const a=Symbol();let l;const c="marpitSVGPolyfill:setZoomFactor,",d=Symbol(),g=Symbol();const h=()=>{const t="Apple Computer, Inc."===navigator.vendor,e=t?[u]:[],i={then:e=>(t?(async()=>{if(void 0===l){const t=document.createElement("canvas");t.width=10,t.height=10;const e=t.getContext("2d"),i=new Image(10,10),n=new Promise((t=>{i.addEventListener("load",(()=>t()))}));i.crossOrigin="anonymous",i.src="data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2210%22%20height%3D%2210%22%20viewBox%3D%220%200%201%201%22%3E%3CforeignObject%20width%3D%221%22%20height%3D%221%22%20requiredExtensions%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%3E%3Cdiv%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%20style%3D%22width%3A%201px%3B%20height%3A%201px%3B%20background%3A%20red%3B%20position%3A%20relative%22%3E%3C%2Fdiv%3E%3C%2FforeignObject%3E%3C%2Fsvg%3E",await n,e.drawImage(i,0,0),l=e.getImageData(5,5,1,1).data[3]<128}return l})().then((t=>{null==e||e(t?[u]:[])})):null==e||e([]),i)};return Object.assign(e,i)};let p,m;function u(t){const e="object"==typeof t&&t.target||document,i="object"==typeof t?t.zoom:t;window[g]||(Object.defineProperty(window,g,{configurable:!0,value:!0}),document.body.style.zoom=1.0001,document.body.offsetHeight,document.body.style.zoom=1,window.addEventListener("message",(({data:t,origin:e})=>{if(e===window.origin)try{if(t&&"string"==typeof t&&t.startsWith(c)){const[,e]=t.split(","),i=Number.parseFloat(e);Number.isNaN(i)||(m=i)}}catch(t){console.error(t)}})));let n=!1;Array.from(e.querySelectorAll("svg[data-marpit-svg]"),(t=>{var e,s,o,r;t.style.transform||(t.style.transform="translateZ(0)");const a=i||m||t.currentScale||1;p!==a&&(p=a,n=a);const l=t.getBoundingClientRect(),{length:c}=t.children;for(let i=0;i<c;i+=1){const n=t.children[i];if(n.getScreenCTM){const t=n.getScreenCTM();if(t){const i=null!==(s=null===(e=n.x)||void 0===e?void 0:e.baseVal.value)&&void 0!==s?s:0,c=null!==(r=null===(o=n.y)||void 0===o?void 0:o.baseVal.value)&&void 0!==r?r:0,d=n.children.length;for(let e=0;e<d;e+=1){const s=n.children[e];if("SECTION"===s.tagName){const{style:e}=s;e.transformOrigin||(e.transformOrigin=`${-i}px ${-c}px`),e.transform=`scale(${a}) matrix(${t.a}, ${t.b}, ${t.c}, ${t.d}, ${t.e-l.left}, ${t.f-l.top}) translateZ(0.0001px)`;break}}}}}})),!1!==n&&Array.from(e.querySelectorAll("iframe"),(({contentWindow:t})=>{null==t||t.postMessage(`${c}${n}`,"null"===window.origin?"*":window.origin)}))}function v({once:t=!1,target:e=document}={}){const i=function(t=document){if(t[d])return t[d];let e=!0;const i=()=>{e=!1,delete t[d]};Object.defineProperty(t,d,{configurable:!0,value:i});let n=[],s=!1;(async()=>{try{n=await h()}finally{s=!0}})();const o=()=>{for(const e of n)e({target:t});s&&0===n.length||e&&window.requestAnimationFrame(o)};return o(),i}(e);return t?(i(),()=>{}):i}p=1,m=void 0;const b=Symbol(),w=(e=document)=>{if("undefined"==typeof window)throw new Error("Marp Core's browser script is valid only in browser context.");if(((e=document)=>{const i=window[a];i||customElements.define("marp-auto-scaling",s);for(const n of Object.keys(t)){const s=`marp-${n}`,a=t[n].proto();null!=r||(r=!!document.createElement("div",{is:"marp-auto-scaling"}).outerHTML.startsWith("<div is")),r&&a!==HTMLElement?i||customElements.define(s,o(a,{style:t[n].style}),{extends:n}):(i||customElements.define(s,o(HTMLElement,t[n])),e.querySelectorAll(`${n}[is="${s}"]`).forEach((t=>{t.outerHTML=t.outerHTML.replace(new RegExp(`^<${n}`,"i"),`<${s}`).replace(new RegExp(`</${n}>$`,"i"),`</${s}>`)})))}window[a]=!0})(e),e[b])return e[b];const i=v({target:e}),n=()=>{i(),delete e[b]},l=Object.assign(n,{cleanup:n,update:()=>w(e)});return Object.defineProperty(e,b,{configurable:!0,value:l}),l},y=document.currentScript;w(y?y.getRootNode():document)}();

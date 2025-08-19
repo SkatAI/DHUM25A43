@@ -36,3 +36,13 @@ https://thesequence.substack.com/p/the-sequence-radar-704-tiny-titan?utm_campaig
 10 Hacks to Work Smarter & Safer with OpenAI's Latest Model
 aug 17 2025
 https://open.substack.com/pub/drphilippahardman/p/gpt-5-for-instructional-designers?r=f2r6v&utm_campaign=post&utm_medium=email
+
+## ChinAI
+
+https://chinai.substack.com/p/chinai-324-superclue-large-model
+
+## AI Fray
+
+In-depth reporting and analytical commentary on artificial intelligence regulation. No legal advice.
+
+https://aifray.com/

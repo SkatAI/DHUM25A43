@@ -1,0 +1,102 @@
+DHUM25A43 - 6
+Investigating with AI
+Networks, Scientometrics, Data analysis powered by LLMs
+11/03/2025
+
+Zoom groups
+1 Far-right 
+2 Genetics
+3 Sports
+4 Climate
+5 New project (former Student vs. Mainstream press group)
+
+
+Good news / bad news
+ Scientometrics project: PubMed = NIH
+
+Networks & Graphs
+
+Networks - news/press (NYT) https://drive.google.com/file/d/1GFR_SvUU8w5CO81KJsDR5SNNNtmDC3WK/view?usp=sharing
+
+Networks - scientometrics (PubMed) https://colab.research.google.com/drive/1Q0CT2dQRu5zgPArg3v0hq6q_h1NjUY0b?usp=sharing
+
+Networks - COP
+https://colab.research.google.com/drive/1N0_aT1V_3lUyiBGcrozmD197YrXn8GRF?usp=sharing
+
+LLM as an analytical tool
+https://colab.research.google.com/drive/1RNVgt6_RviZ58YZCvZAGeH6Yoh-Lw49r?usp=sharing
+
+Tools: CorText, python colab notebooks + OpenAi API
+
+Data: NYT sample :
+https://drive.google.com/file/d/1CliaHpiE48nG2eoZamBQJIVg13caqWXP/view?usp=sharing
+IPCC data:
+https://drive.google.com/file/d/1TfDdke1MOonnjhql6-Xbm4viP5V_Upkp/view?usp=sharing
+
+
+CorText for Data Analysis Visualization
+
+🔹 Graph Visualization Tools: CorText
+🔹 Applications:
+
+Linguistics: Word co-occurrence networks, NER
+
+Sociology: Power structures, influence, social capital
+	Social Networks
+Social Movements & Protest Networks
+Corporate & Political Elites
+Community & Social Cohesion
+
+Scientometrics
+Media studies
+Politics: International alliances
+
+CorText account:
+https://www.cortext.net/activities-projects/cortext-manager/
+
+NYT AI dataset with CorText
+https://retina.cortext.net/#/graph/?url=https%3A%2F%2Fassets.cortext.net%2Fdocs%2Faed95ce464bb43179f580b7fc8668105&sa[]=w&sa[]=i&sa[]=o&sa[]=re&sa[]=be&ca=cll&st[]=w&st[]=i&st[]=o&st[]=cll&st[]=re&st[]=be&lt=1.974&ls=10&le=22
+
+LLM as a research tool
+
+Simple NER with LLM
+   """
+    Uses GPT-3.5-turbo to extract named entities from a list of texts.
+    The prompt instructs the model to return a JSON array where each element is an object
+    with keys 'text' (the original text) and 'entities' (a list of objects with keys 'entity' and 'type').
+    """
+    prompt = (
+        "Extract the named entities (e.g., Person, Organization, Location) and related topics from the following texts. "
+        "Return only valid JSON. The JSON should be an array, where each element is an object with keys 'text' "
+        "(the original text),  'entities' (a list of objects, each having keys 'entity' and 'type') and "
+        " 'topics' (a list of topics, each having keys 'topic' and 'type').\n\n"
+    )
+
+LLM output
+
+Data Sources
+
+Doctissimo (forum “antibio”)
+Twitter (-> 2023)
+Youtube
+Presse ('Mediapart', 'Le Figaro', 'Libération', 'Le Monde' )  (+ Factiva)
+Web
+Query
+
+((resistant OR resistante OR resistance OR resistantes OR resistance OR résistant OR résistante OR résistance OR résistantes OR résistance) AND (antibiotique OR antibiotiques OR antibio OR antibios OR antimicrobien OR antimicrobiens)) OR antibioresistance OR antibiorésistant OR antibioresistante OR antibiorésistance OR antibiorésistant OR antibiorésistante OR #antibioresistance OR #antibiorésistant OR #antibioresistante OR #antibiorésistance OR #antibiorésistant OR #antibiorésistante)
+((resistant OR resistante OR resistance OR resistantes OR resistance OR résistant OR résistante OR résistance OR résistantes OR résistance) (Amphotericine OR Amikacine  OR Gentamicine  OR Neomycine  OR Nétilmycine  OR Spectinomycine  OR Streptomycine  OR Tobramycine OR colistine OR Polymyxine OR Daptomycine OR Vancomycine OR Teicoplanine OR Fosfomycine OR Ceftriaxone OR Céfépime  OR Céfotaxime  OR Cefpirome  OR Ceftazidime OR Céfixime OR Cefpodoxime OR Céfodiam OR Céfamandole  OR Céfoxitine  OR Céfuroxime OR Céfaclor  OR Céfadroxil  OR Céfalexine  OR Céfalotine  OR Céfazoline  OR Céfradine OR Aztréonam OR Ertapénem OR Imipénem OR Méropénem OR Témocilline OR Pivmécillinam OR Pipéracilline OR Tazobactam OR Cilastatine OR Ticarcilline OR (Acide clavulanique) OR Oxacilline OR Cloxacilline OR Pénicilline OR Benzathine OR benzylpénicilline OR Ampicilline OR Sulbactam OR Amoxicilline OR cefpodocile OR proxetil))
+
+Antibiotics in  'Mediapart', 'Le Figaro', 'Libération', 'Le Monde' 2004-2024 (2045 documents)
+
+LLM Prompt
+
+Annotation by LLMs -  actants, arguments, topics, summary
+
+Matthieu Amiech\xa0: «\xa0La gestion de la crise sanitaire nous entraîne vers une société-machine\xa0»\n Pour l’éditeur Matthieu Amiech, penseur du développement des technologies, la crise liée au Covid constitue «\xa0un effet d’aubaine pour les géants du numérique\xa0». Face à «\xa0l’informatisation de toute la vie sociale\xa0», face à la mise «\xa0à l’arrêt\xa0» ou presque de la vie démocratique, les citoyens se retrouvent aujourd'hui «\xa0sans défense morale et politique\xa0». Sa réponse\xa0: une «\xa0désobéissance concertée\xa0».\n Voilà un an que nous vivons sous le «\xa0régime Covid\xa0». Un nouveau régime de relations sociales fait de perte du toucher, de disparition du festif, d’assèchement culturel et de reculs démocratiques. Un régime où le numérique s’impose à tous les niveaux, sans que l’impact écologique de cette mutation ne soit jamais interrogé.\r\n\r\nPour Matthieu Amiech, penseur de longue date du développement des technologies, celle-ci est pourtant profonde. En 2013, déjà, il alertait, dans un ouvrage collectif signé du groupe Marcuse (Mouvement autonome de réflexion critique à l’usage des survivants de l’économie), La Liberté dans le coma – Essai sur l’identification électronique et les motifs de s’y opposer, sur les menaces que fait peser la société numérique sur l’égalité et les libertés… 
+
+Annotation by LLMs -  actants, arguments, topics
+
+Annotation by LLMs - topics, summary
+
+Categorization of actants by LLMs
+

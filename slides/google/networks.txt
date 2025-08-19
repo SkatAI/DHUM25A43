@@ -1,0 +1,100 @@
+DHUM25A43 - 5
+Investigating with AI
+Networks
+04/03/2025
+
+Networks & Graphs
+
+🔹 Definition: What is a network? Nodes (vertices) & edges (links)
+🔹 Examples: Social networks, biological networks, internet, co-occurrence networks, knowledge graphs
+🔹 Why study networks? Understanding relationships, patterns, structures, visualization
+
+Jacob L. Moreno 1934 Who Shall Survive?
+analyze choices or preferences within a group
+
+Tools, Visualization & Applications
+
+🔹 Graph Visualization Tools: CorText, Gephi, NetworkX (Python), Cytoscape
+
+🔹 Applications:
+
+Linguistics: Word co-occurrence networks, NER
+
+Sociology: Power structures, influence, social capital
+	Social Networks
+Social Movements & Protest Networks
+Corporate & Political Elites
+Community & Social Cohesion
+
+Scientometrics
+Media studies
+Politics: International alliances
+
+https://www.cortext.net/activities-projects/cortext-manager/
+
+NYT AI dataset with CorText
+https://retina.cortext.net/#/graph/?url=https%3A%2F%2Fassets.cortext.net%2Fdocs%2Faed95ce464bb43179f580b7fc8668105&sa[]=w&sa[]=i&sa[]=o&sa[]=re&sa[]=be&ca=cll&st[]=w&st[]=i&st[]=o&st[]=cll&st[]=re&st[]=be&lt=1.974&ls=10&le=22
+
+
+
+
+A knowledge graph is a structured representation of facts and relationships between entities.
+
+Nodes (Entities): People, places, objects, concepts.
+Edges (Relationships): How entities are connected (e.g., "Paris is the capital of France").
+
+Why use Knowledge Graphs?
+Improve search (Google Knowledge Graph).
+Enable reasoning & inference.
+
+Knowledge Graphs
+https://zilliz.com/learn/what-is-knowledge-graph
+
+LLMs & Knowledge Graphs
+
+🔹 Large Language Models (LLMs) → AI trained on vast text datasets to generate and understand language (e.g., chatGPT, Gemini).
+
+🔹 Knowledge Graphs (KGs) → Structured databases representing facts, entities, and relationships.
+
+🔹 Why combine LLMs & KGs?
+
+LLMs are good at generalizing from text but may generate hallucinations.
+KGs provide structured, factual knowledge but lack reasoning capabilities.
+Together, they improve accuracy, reasoning, and interpretability in AI.
+https://neo4j.com/blog/developer/knowledge-graphs-llms-multi-hop-question-answering/
+
+LLM as a research tool
+
+Data Sources
+
+Doctissimo (forum “antibio”)
+Twitter (-> 2023)
+Youtube
+Presse ('Mediapart', 'Le Figaro', 'Libération', 'Le Monde' )  (+ Factiva)
+Web
+Query
+
+((resistant OR resistante OR resistance OR resistantes OR resistance OR résistant OR résistante OR résistance OR résistantes OR résistance) AND (antibiotique OR antibiotiques OR antibio OR antibios OR antimicrobien OR antimicrobiens)) OR antibioresistance OR antibiorésistant OR antibioresistante OR antibiorésistance OR antibiorésistant OR antibiorésistante OR #antibioresistance OR #antibiorésistant OR #antibioresistante OR #antibiorésistance OR #antibiorésistant OR #antibiorésistante)
+((resistant OR resistante OR resistance OR resistantes OR resistance OR résistant OR résistante OR résistance OR résistantes OR résistance) (Amphotericine OR Amikacine  OR Gentamicine  OR Neomycine  OR Nétilmycine  OR Spectinomycine  OR Streptomycine  OR Tobramycine OR colistine OR Polymyxine OR Daptomycine OR Vancomycine OR Teicoplanine OR Fosfomycine OR Ceftriaxone OR Céfépime  OR Céfotaxime  OR Cefpirome  OR Ceftazidime OR Céfixime OR Cefpodoxime OR Céfodiam OR Céfamandole  OR Céfoxitine  OR Céfuroxime OR Céfaclor  OR Céfadroxil  OR Céfalexine  OR Céfalotine  OR Céfazoline  OR Céfradine OR Aztréonam OR Ertapénem OR Imipénem OR Méropénem OR Témocilline OR Pivmécillinam OR Pipéracilline OR Tazobactam OR Cilastatine OR Ticarcilline OR (Acide clavulanique) OR Oxacilline OR Cloxacilline OR Pénicilline OR Benzathine OR benzylpénicilline OR Ampicilline OR Sulbactam OR Amoxicilline OR cefpodocile OR proxetil))
+
+Antibiotics in  'Mediapart', 'Le Figaro', 'Libération', 'Le Monde' 2004-2024 (2045 documents)
+
+LLM Prompt
+
+Annotation by LLMs -  actants, arguments, topics, summary
+
+Matthieu Amiech\xa0: «\xa0La gestion de la crise sanitaire nous entraîne vers une société-machine\xa0»\n Pour l’éditeur Matthieu Amiech, penseur du développement des technologies, la crise liée au Covid constitue «\xa0un effet d’aubaine pour les géants du numérique\xa0». Face à «\xa0l’informatisation de toute la vie sociale\xa0», face à la mise «\xa0à l’arrêt\xa0» ou presque de la vie démocratique, les citoyens se retrouvent aujourd'hui «\xa0sans défense morale et politique\xa0». Sa réponse\xa0: une «\xa0désobéissance concertée\xa0».\n Voilà un an que nous vivons sous le «\xa0régime Covid\xa0». Un nouveau régime de relations sociales fait de perte du toucher, de disparition du festif, d’assèchement culturel et de reculs démocratiques. Un régime où le numérique s’impose à tous les niveaux, sans que l’impact écologique de cette mutation ne soit jamais interrogé.\r\n\r\nPour Matthieu Amiech, penseur de longue date du développement des technologies, celle-ci est pourtant profonde. En 2013, déjà, il alertait, dans un ouvrage collectif signé du groupe Marcuse (Mouvement autonome de réflexion critique à l’usage des survivants de l’économie), La Liberté dans le coma – Essai sur l’identification électronique et les motifs de s’y opposer, sur les menaces que fait peser la société numérique sur l’égalité et les libertés… 
+
+Annotation by LLMs -  actants, arguments, topics
+
+Annotation by LLMs - topics, summary
+
+Categorization of actants by LLMs
+
+Mapping actants & arguments
+https://drive.google.com/file/d/1X4NPrPBuLqzlQAemJmwR9sgHd0i7Ma7s/view?usp=sharing
+
+Clusters of arguments by year
+
+Detecting periods
+

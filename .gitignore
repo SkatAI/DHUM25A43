@@ -94,12 +94,8 @@ credentials.json
 config/secrets.yml
 
 # Data files (comment out if you want to track datasets)
-data/*.csv
-data/*.json
-data/*.xlsx
-# Uncomment to track small datasets:
-# !data/sample*.csv
+data/*
 
-# Slides exports (keeping source)
-# slides/exports/
-*.pptx
+# Uncomment to track small datasets:
+!data/titanic.csv
+

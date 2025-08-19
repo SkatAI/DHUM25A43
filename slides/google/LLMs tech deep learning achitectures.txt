@@ -1,0 +1,92 @@
+DHUM25A43 - 7
+Investigating with AI
+Neural networks & LLMs
+18/03, 2025
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+La lutte contre le racisme, l'antisémitisme et la xénophobie, année 2022
+CNCDH 2022 FOCUS 2022
+HATE SPEECH ON YOUTUBE –
+AN INVESTIGATION BY A TEAM OF RESEARCHERS ASSOCIATED WITH THE SCIENCES PO MÉDIALAB
+
+
+
+
+
+
+
+
+
+
+
+
+
+Open source LLMs
+Different levels of openness: 
+model : you can download the model and use it as is
+code: the code to create the model 
+training data: the data used in training the model
+Some models are fully open (DeepSeek), partially open (LLama, Mistral 7B), or closed (OpenAI o1, Claude Sonnet, Gemini)
+
+Open source - Performance 
+deepseek-R1
+
+https://claude.ai/new
+
+https://groq.com/
+
+https://aistudio.google.com/prompts/new_chat
+
+https://www.deepseek.com/
+
+
+Open AI chat & API
+
+Prompt
+
+    Below are multiple texts. For each one, extract the following information in **strict JSON format**:
+    - **Actors' names** (List of important people or entities)
+    - **Their categories** (e.g., Politician, Organization, Scientist)
+    - **Arguments** (Main claims made in the text)
+    - **Topics** (General themes or subject areas covered)
+
+    **Format the output as a JSON list, where each entry corresponds to a text.**
+   
+    **JSON Example Format:**
+    ```json
+    [
+        {{
+            "actors": ["Person or Entity 1", "Person or Entity 2"],
+            "categories": ["Category 1", "Category 2"],
+            "arguments": ["Main argument 1", "Main argument 2"],
+            "topics": ["Topic 1", "Topic 2"]
+        }},
+        ...
+    ]
+    ```
+
+    **Important Notes:**
+    - Always return an **array of JSON objects**, each corresponding to a text.
+    - If a field is **empty**, return an empty list `[]` instead of omitting it.
+    - **Do not use Markdown formatting** in the response.
+    - Ensure JSON syntax is **strictly valid**.
+
+    **Here are the texts:**
+    {batch_texts}
+    """
+
+https://platform.openai.com/docs/overview
+
+https://platform.openai.com/api-keys

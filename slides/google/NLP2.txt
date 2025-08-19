@@ -1,0 +1,55 @@
+DHUM25A43 - 4
+Investigating with AI
+NLP 
+Feb 18th, 2025
+
+What we saw last time
+Classic NLP tasks
+classification (Sentiment, toxicity, spam, …)
+POS (adj, nouns, verbs, …)
+stopwords
+NER : persons, location, GPEs, ORGs, …
+Embeddings
+text to vectors
+similarity score
+
+Today: Hands on 
+Demo: Wikipedia AI page (30mn)
+NER
+Spacy
+Embeddings with transformers
+corpus normalization
+live notebook
+Your turn (1h)
+similar analysis using wikipedia but related to your subject
+Demo Next (30mn) 
+Next step in data analysis using the NYT API
+
+Normalization
+Text normalization for frequency based analysis on words
+remove stopwords
+lowercase
+lemmatize 
+gaming, to game, gamer, games => game
+
+
+Topic modeling
+Automatically detecting the topics in a corpus based on the relative frequency of the different words
+requires normalization
+crystal ball
+difficult to find the right number of topics beforehand
+
+Exploratory textual analysis using a New York Times (NYT) dataset. The analysis includes:
+Data preprocessing: Cleaning and extracting a subset of relevant data
+AI-related publication detection: Using keyword-based filtering
+Descriptive statistics: Time trends and document counts
+Topic modeling: Identifying main themes in the dataset
+Document embeddings & interactive 2D mapping
+Time series analysis: Tracking topic evolution over time
+https://drive.google.com/file/d/1GFR_SvUU8w5CO81KJsDR5SNNNtmDC3WK/view?usp=sharing
+
+
+
+
+https://drive.google.com/file/d/1zsrg_kiFnQDLWy0KoWhpE8mXZKb91zkb/view?usp=sharing
+
