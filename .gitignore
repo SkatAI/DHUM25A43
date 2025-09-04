@@ -98,4 +98,5 @@ data/*
 
 # Uncomment to track small datasets:
 !data/titanic.csv
+!data/imdb_top_1000.csv
 
