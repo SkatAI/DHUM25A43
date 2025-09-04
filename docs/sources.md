@@ -16,14 +16,14 @@ Andriy Burkov
 
 https://www.theneurondaily.com/
 
-## Simon Willison
-https://simonw.substack.com/
-
-
 ## The Rundown AI
 
 good newsletter
 https://www.therundown.ai/
+
+## Simon Willison
+https://simonw.substack.com/
+
 
 ## The sequence
 
